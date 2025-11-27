@@ -75,8 +75,8 @@ Version: 1.0.0
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
 :root {
-  --theme-color: #fc6601;
-  --theme-colorRGB: 252, 102, 1;
+  --theme-color: rgb(32, 53, 76);
+  --theme-colorRGB: rgb(32, 53, 76);
   --title-color: #000000;
   --body-color: #666666;
   --text-color: #444444;
@@ -88,7 +88,7 @@ Version: 1.0.0
   --yellow-color: #fec624;
   --success-color: #28a745;
   --error-color: #dc3545;
-  --rating-color: #ff890a;
+  --rating-color: rgb(32, 53, 76);
   --border-color: #cecece;
   --border-blackColor: #272727;
   --border-blackLightColor: #515151;
@@ -124,7 +124,7 @@ Version: 1.0.0
 
 .home-five,
 .home-four {
-  --theme-color: #fc6601;
+  --theme-color: rgb(32, 53, 76);
   --smoke-color: #f6f7fc;
 }
 
@@ -9288,7 +9288,7 @@ blockquote.vs-quote .quote-author {
   }
 }
 .history-block__year {
-  font-size: 100px;
+  font-size: 45px;
   font-weight: 900;
   font-family: var(--title-font);
   color: var(--black-color);
@@ -9360,6 +9360,7 @@ blockquote.vs-quote .quote-author {
   }
 }
 .service-block__icon {
+  filter: rgb(32, 53, 76);
   margin-bottom: 40px;
   min-height: 75px;
   display: flex;
@@ -16457,35 +16458,42 @@ span.select2-selection.select2-selection--single:focus {
   font-weight: 700;
   margin: 0;
 }
+.counters-row {
+  align-items: center;
+}
 
 .counter-media {
   display: flex;
   align-items: center;
-  gap: 41px;
-  margin-bottom: 30px;
+  gap: 20px;
 }
+
 .counter-media__icon {
   padding: 18px 0 18px 20px;
   position: relative;
   z-index: 1;
 }
+
 .counter-media__icon::before {
   position: absolute;
   content: "";
   width: 40px;
   height: 100%;
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000 100%);
   left: 0;
   top: 0;
   bottom: 0;
   z-index: -1;
 }
-.counter-media__number, .counter-media__plus {
+
+.counter-media__number,
+.counter-media__plus {
   color: var(--white-color);
   font-size: 64px;
-  line-height: 1;
   font-weight: 700;
+  line-height: 1;
 }
+
 .counter-media__title {
   color: var(--white-color);
   margin-bottom: 0;
@@ -16493,6 +16501,7 @@ span.select2-selection.select2-selection--single:focus {
   text-transform: uppercase;
   font-weight: 600;
 }
+
 
 .project--layout5 {
   padding-left: 320px;
@@ -17090,3 +17099,6 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* New Icons properties index */
