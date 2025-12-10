@@ -53,6 +53,71 @@
   <link rel="stylesheet" href="assets/css/select2.min.css">
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* --- TARJETAS UN POCO MÁS GRANDES --- */
+.service-block {
+  min-height: 480px !important; /* antes eran ~380px, ahora son más grandes */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+/* Permitir que el texto crezca sin empujar los botones */
+.service-block__text {
+  flex-grow: 1;
+}
+
+
+/* --- RESTAURAR EL TAMAÑO ORIGINAL DE LOS BOTONES --- */
+.service-block__link {
+  display: inline-block;   /* evita que se estire */
+  width: auto !important;
+  height: auto !important;
+  margin-top: 15px;
+}
+
+.service-block__link svg {
+  width: 30px;  /* tamaño original del icono */
+  height: auto;
+}
+
+
+/* --- EVITAR QUE EL CARRUSEL ROMPA EL TAMAÑO --- */
+.vs-carousel > div {
+  height: auto !important;
+}
+
+.vs-carousel > div > .service-block {
+  height: 100% !important;
+}
+
+  </style>
+  <style>.card {
+    width: 340px;       /* antes 300px */
+    padding: 20px;
+    border-radius: 14px;
+}
+
+/* ---- BOTONES MÁS GRANDES ---- */
+.btn {
+    padding: 14px 22px; /* botones grandes */
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+/* ---- RESPONSIVE PARA TELÉFONO ---- */
+@media (max-width: 480px) {
+    .card {
+        width: 260px;        /* más pequeñas en móvil */
+        padding: 16px;
+    }
+
+    .btn {
+        padding: 10px 16px;  /* botones más pequeños en móvil */
+        font-size: 0.95rem;
+    }
+}</style>
 </head>
 
 <body>
@@ -436,7 +501,7 @@ Optimización de procesos logísticos. Presencia web institucional.
         <div>
           <div class="service-block" data-bg-src="assets/img/textures/service-block-bg.png">
             <div class="service-block__icon">
-              <img src="assets/img/icons/service-icon-1-1.svg" alt="icon">
+              <img src="assets/img/icons/factory.png" alt="icon">
             </div>
             <h3 class="service-block__title h4">
               <a class="service-block__title__link" href="service-details.html">2 Plantas de Producción</a>
@@ -462,7 +527,7 @@ Ubicadas estratégicamente en Manzanillo</p>
         <div>
           <div class="service-block" data-bg-src="assets/img/textures/service-block-bg.png">
             <div class="service-block__icon">
-              <img src="assets/img/icons/service-icon-1-2.svg" alt="icon">
+              <img src="assets/img/icons/delivery.png" alt="icon">
             </div>
             <h3 class="service-block__title h4">
               <a class="service-block__title__link" href="service-details.html">Flota de Entrega</a>
@@ -488,7 +553,7 @@ Equipos propios, mantenimiento preventivo continuo.</p>
         <div>
           <div class="service-block" data-bg-src="assets/img/textures/service-block-bg.png">
             <div class="service-block__icon">
-              <img src="assets/img/icons/service-icon-1-3.svg" alt="icon">
+              <img src="assets/img/icons/workers.png" alt="icon">
             </div>
             <h3 class="service-block__title h4">
               <a class="service-block__title__link" href="service-details.html">Equipo Humano</a>
@@ -696,7 +761,7 @@ precios justos y procesos transparentes.
                 <span class="squre"></span>
               </div>
               <div class="service-block__icon">
-                <img src="assets/img/icons/service-icon-1-1.svg" alt="icon">
+                <img src="assets/img/icons/materials.png" alt="icon">
               </div>
               <h3 class="service-block__title h4">
                 <a class="service-block__title__link" href="service-details.html">Materiales Certificados</a>
@@ -713,7 +778,7 @@ Cumplimiento normativo NMX-C-414 y NMX-C-155..</p>
                 <span class="squre"></span>
               </div>
               <div class="service-block__icon">
-                <img src="assets/img/icons/service-icon-1-2.svg" alt="icon">
+                <img src="assets/img/icons/factory.png" alt="icon">
               </div>
               <h3 class="service-block__title h4">
                 <a class="service-block__title__link" href="service-details.html">100% Empresa Local</a>
@@ -731,7 +796,7 @@ Cumplimiento normativo NMX-C-414 y NMX-C-155..</p>
                 <span class="squre"></span>
               </div>
               <div class="service-block__icon">
-                <img src="assets/img/icons/service-icon-1-3.svg" alt="icon">
+                <img src="assets/img/icons/workers.png" alt="icon">
               </div>
               <h3 class="service-block__title h4">
                 <a class="service-block__title__link" href="service-details.html">Equipos Propios</a>
@@ -749,7 +814,7 @@ sobre calidad, puntualidad y servicio..</p>
                 <span class="squre"></span>
               </div>
               <div class="service-block__icon">
-                <img src="assets/img/icons/service-icon-1-1.svg" alt="icon">
+                <img src="assets/img/icons/experience.png" alt="icon">
               </div>
               <h3 class="service-block__title h4">
                 <a class="service-block__title__link" href="service-details.html">Experiencia Diversificada</a>
@@ -767,7 +832,7 @@ obra pública y proyectos comerciales..</p>
                 <span class="squre"></span>
               </div>
               <div class="service-block__icon">
-                <img src="assets/img/icons/service-icon-1-1.svg" alt="icon">
+                <img src="assets/img/icons/puntuality.png" alt="icon">
               </div>
               <h3 class="service-block__title h4">
                 <a class="service-block__title__link" href="service-details.html">Puntualidad Garantizada</a>

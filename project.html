@@ -54,6 +54,71 @@
   <link rel="stylesheet" href="assets/css/select2.min.css">
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* --- TARJETAS UN POCO MÁS GRANDES --- */
+.service-block {
+  min-height: 600px !important; /* antes eran ~380px, ahora son más grandes */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+/* Permitir que el texto crezca sin empujar los botones */
+.service-block__text {
+  flex-grow: 1;
+}
+
+
+/* --- RESTAURAR EL TAMAÑO ORIGINAL DE LOS BOTONES --- */
+.service-block__link {
+  display: inline-block;   /* evita que se estire */
+  width: auto !important;
+  height: auto !important;
+  margin-top: 15px;
+}
+
+.service-block__link svg {
+  width: 30px;  /* tamaño original del icono */
+  height: auto;
+}
+
+
+/* --- EVITAR QUE EL CARRUSEL ROMPA EL TAMAÑO --- */
+.vs-carousel > div {
+  height: auto !important;
+}
+
+.vs-carousel > div > .service-block {
+  height: 100% !important;
+}
+
+  </style>
+  <style>.card {
+    width: 340px;       /* antes 300px */
+    padding: 20px;
+    border-radius: 14px;
+}
+
+/* ---- BOTONES MÁS GRANDES ---- */
+.btn {
+    padding: 14px 22px; /* botones grandes */
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+/* ---- RESPONSIVE PARA TELÉFONO ---- */
+@media (max-width: 480px) {
+    .card {
+        width: 260px;        /* más pequeñas en móvil */
+        padding: 16px;
+    }
+
+    .btn {
+        padding: 10px 16px;  /* botones más pequeños en móvil */
+        font-size: 0.95rem;
+    }
+}</style>
 </head>
 
 <body>
