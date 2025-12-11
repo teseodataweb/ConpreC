@@ -43,6 +43,50 @@
   <link rel="stylesheet" href="assets/css/slick.min.css">
   <link rel="stylesheet" href="assets/css/select2.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Fondo de la ventana emergente */
+#popupMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  z-index: 1000;
+  max-width: 400px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+/* Fondo de overlay */
+#popupOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+#popupMessage button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#popupMessage button:hover {
+  background: #0056b3;
+}
+
+  </style>
 </head>
 
 <body>
@@ -403,10 +447,10 @@
             </div>
           </div>
           
-          <button type="submit" class="submit-btn">
-            <span class="vs-btn__bar"></span>
-            Enviar Solicitud
-          </button>
+           <button type="submit" class="submit-btn">
+    <span class="vs-btn__bar"></span>
+    Enviar Solicitud
+  </button>
         </form>
         
         <p class="form-note">⚠️ Este formulario NO genera cotizaciones automáticas. Nuestro equipo se pondrá en contacto contigo dentro de 24 horas hábiles para brindarte una cotización personalizada.</p>
@@ -606,5 +650,45 @@
   <script src="assets/js/isotope.pkgd.min.js"></script>
   <script src="assets/js/select2.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault(); // Evitar recarga de página
+
+    const formData = new FormData(this);
+
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        showPopup(data);
+        document.getElementById("contactForm").reset(); // Limpiar formulario
+    })
+    .catch(error => {
+        showPopup("Hubo un error al enviar la solicitud.");
+        console.error(error);
+    });
+});
+
+function showPopup(message){
+    document.getElementById("popupText").innerText = message;
+    document.getElementById("popupOverlay").style.display = "block";
+    document.getElementById("popupMessage").style.display = "block";
+}
+
+function closePopup(){
+    document.getElementById("popupOverlay").style.display = "none";
+    document.getElementById("popupMessage").style.display = "none";
+}
+</script>
+
+  <div id="popupOverlay"></div>
+<div id="popupMessage">
+  <span id="popupText"></span>
+  <br>
+  <button onclick="closePopup()">Cerrar</button>
+</div>
+
 </body>
 </html>
