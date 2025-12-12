@@ -1,0 +1,126 @@
+/* assets/css/modal.css */
+/* Nuevas clases: modal-overlay, modal-window, modal-close, modal-content, modal-image, modal-title, modal-subtitle, modal-text, modal-scroll */
+
+/* Overlay oscuro semi-transparente que ocupa toda la pantalla */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18,18,18,0.72); /* gris oscuro semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* por encima de todo */
+  backdrop-filter: blur(4px); /* opcional, texto seguirá legible */
+  -webkit-backdrop-filter: blur(4px);
+  animation: modal-fade-in .16s ease;
+}
+
+/* Animación de aparición */
+@keyframes modal-fade-in {
+  from { opacity: 0; transform: scale(.995); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Ventana modal (miniventana) */
+.modal-window {
+  width: min(920px, 92vw);
+  max-height: calc(100vh - 80px);
+  background: rgba(24,24,24,0.98); /* ligeramente distinto del overlay */
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  display: flex;
+  gap: 28px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Estructura interna: imagen + contenido */
+.modal-image {
+  flex: 0 0 36%;
+  min-width: 200px;
+  max-height: calc(100vh - 160px);
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+  display: block;
+}
+
+/* Contenedor de texto; será scrollable si es largo */
+.modal-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
+  padding-right: 6px; /* espacio para scrollbar */
+}
+
+/* Tipografía dentro del modal */
+.modal-subtitle {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 6px;
+  color: #d6d6d6;
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  margin: 0 0 10px 0;
+  line-height: 1.18;
+  color: #fff;
+}
+
+.modal-text {
+  font-size: 0.97rem;
+  color: #eaeaea;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+/* Botón de cerrar (X) en esquina superior derecha */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  z-index: 10000;
+  transition: transform .12s ease, opacity .12s;
+  opacity: 0.95;
+}
+.modal-close:hover { transform: scale(1.08); opacity: 1; }
+
+/* Cuando no hay imagen visible, la ventana se ajusta */
+.modal-window.no-image { padding-left: 28px; }
+
+/* Scrollbar mínimo (estético y discreto) */
+.modal-scroll::-webkit-scrollbar { width: 9px; }
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+}
+.modal-scroll::-webkit-scrollbar-track { background: transparent; }
+
+/* Responsive: en pantallas pequeñas apila verticalmente */
+@media (max-width: 720px) {
+  .modal-window {
+    flex-direction: column;
+    padding: 18px;
+    gap: 12px;
+    width: min(640px, 96vw);
+  }
+  .modal-image { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+  .modal-window.no-image { padding-top: 16px; }
+}

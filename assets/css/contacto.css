@@ -1,0 +1,134 @@
+/* ==== PALETA ==== */
+:root {
+  --gold: #b49644;
+  --gold-dark: #8a6f2f;
+  --gold-light: #dac47a;
+}
+
+/* ===== SECCIÓN DE INFORMACIÓN DE CONTACTO ===== */
+.contact-info-section .section-title {
+  text-align: center !important;
+  color: var(--gold) !important;
+  margin-bottom: 35px !important;
+  font-weight: 700 !important;
+}
+
+/* GRID */
+.contact-info-section .contact-info-grid {
+  display: grid !important;
+  gap: 25px !important;
+}
+
+/* ===== TARJETAS ===== */
+.contact-info-section .contact-info-card {
+  background: var(--gold) !important;
+  color: #fff !important;
+  padding: 25px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25) !important;
+  transition: all .3s ease !important;
+  border: none !important;
+}
+
+/* HOVER */
+.contact-info-section .contact-info-card:hover {
+  background: var(--gold-dark) !important;
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.35) !important;
+}
+
+/* HEADER DE TARJETA */
+.contact-info-section .contact-info-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 10px !important;
+}
+
+/* ÍCONO */
+.contact-info-section .contact-info-icon i {
+  font-size: 26px !important;
+  padding: 10px !important;
+  border-radius: 50% !important;
+  background: var(--gold-light) !important;
+  color: var(--gold-dark) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
+}
+
+/* TÍTULO */
+.contact-info-section .contact-info-title {
+  font-size: 20px !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+}
+
+/* TEXTO Y ENLACES */
+.contact-info-section .contact-info-content p,
+.contact-info-section .contact-info-content a {
+  color: #fff !important;
+  font-size: 15px !important;
+}
+
+.contact-info-section .contact-info-content a:hover {
+  opacity: .75 !important;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 10px 15px !important;
+  border-radius: 50px !important;
+  background: #25d366 !important;
+  color: white !important;
+  font-weight: 600 !important;
+  margin-top: 10px !important;
+  transition: .3s !important;
+}
+
+.whatsapp-btn:hover {
+  background: #1da851 !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Redes sociales */
+.footer-social a {
+  color: #fff !important;
+  font-size: 18px !important;
+  margin-right: 10px !important;
+  transition: .3s !important;
+}
+
+.footer-social a:hover {
+  color: var(--gold-light) !important;
+}
+
+/* --- Estilo SOLO para tu bloque --- */
+.service-block__icon {
+    display: flex;
+    justify-content: center;     /* Centra horizontal */
+    align-items: center;         /* Centra vertical */
+    height: 150px;               /* Ajusta si quieres más o menos alto */
+    width: 150px;                /* Tamaño uniforme */
+    margin: auto;
+    background-color: #1b2a38;   /* ← Fondo elegante que combina bien */
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+/* Icono blanco */
+.service-block__icon i {
+    font-size: 60px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Efecto hover */
+.service-block__icon:hover {
+    background-color: #324a5f;   /* Color que combina con el anterior */
+}
+
+.service-block__icon:hover i {
+    transform: scale(1.15);
+}

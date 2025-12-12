@@ -75,8 +75,8 @@ Version: 1.0.0
 /*------------------- 1.2. Function -------------------*/
 /*------------------- 1.3. Variable-------------------*/
 :root {
-  --theme-color: rgb(32, 53, 76);
-  --theme-colorRGB: rgb(32, 53, 76);
+  --theme-color: #00a550;
+  --theme-colorRGB: #00a550;
   --title-color: #000000;
   --body-color: #666666;
   --text-color: #444444;
@@ -88,7 +88,7 @@ Version: 1.0.0
   --yellow-color: #fec624;
   --success-color: #28a745;
   --error-color: #dc3545;
-  --rating-color: rgb(32, 53, 76);
+  --rating-color: #00a550;
   --border-color: #cecece;
   --border-blackColor: #272727;
   --border-blackLightColor: #515151;
@@ -124,7 +124,7 @@ Version: 1.0.0
 
 .home-five,
 .home-four {
-  --theme-color: rgb(32, 53, 76);
+  --theme-color: #00a550;
   --smoke-color: #f6f7fc;
 }
 
