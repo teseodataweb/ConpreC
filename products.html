@@ -9,9 +9,21 @@
   <meta name="description" content="Catálogo completo de concretos por resistencia (F'c), pavimentos (MR) y productos especializados para construcción">
   <meta name="keywords" content="concreto, resistencia, F'c, MR, pavimentos, mortero, impermeabilizante, aditivos" />
   <meta name="robots" content="INDEX,FOLLOW">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Catálogo de Productos | Conpre Concretos">
+  <meta property="og:description" content="Catálogo completo de concretos: F'c 100-500 kg/cm², MR 35-48, mortero fluido. Resistencias rápidas y aditivos especiales.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:locale" content="es_MX">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Catálogo de Productos | Conpre Concretos">
+  <meta name="twitter:description" content="Concretos F'c, MR y productos especializados para construcción.">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://conpreconcretos.com/products.html">
   <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Favicons - Place favicon.ico in the root directory -->
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
@@ -29,365 +41,34 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <!--==============================
-	  Google Fonts
-	============================== -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&amp;family=Rubik:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-  <!--==============================
-	    All CSS File
-	============================== -->
-  <!-- Bootstrap -->
+  <!-- CSS Files -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <!-- Fontawesome Icon -->
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-  <!-- Magnific Popup -->
   <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-  <!-- Slick Slider -->
   <link rel="stylesheet" href="assets/css/slick.min.css">
-  <!-- Select 2 -->
   <link rel="stylesheet" href="assets/css/select2.min.css">
-  <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* Estilos adicionales para las tablas manteniendo el estilo Consik */
-    .product-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 40px;
-      background: var(--white-color);
-      box-shadow: var(--box-shadow);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    
-    .product-table th {
-      background: var(--title-color);
-      color: var(--white-color);
-      padding: 20px 15px;
-      text-align: left;
-      font-weight: 600;
-      font-size: 16px;
-      font-family: var(--title-font);
-    }
-    
-    .product-table td {
-      padding: 15px;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 15px;
-    }
-    
-    .product-table tr:nth-child(even) {
-      background: #f8f9fa;
-    }
-    
-    .product-table tr:hover {
-      background: var(--light-color);
-    }
-    
-    .category-title {
-      color: var(--title-color);
-      border-bottom: 3px solid var(--theme-color);
-      padding-bottom: 15px;
-      margin-bottom: 30px;
-      position: relative;
-    }
-    
-    .category-title:after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--theme-color);
-    }
-    
-    .product-feature {
-      background: var(--light-color);
-      border-left: 4px solid var(--theme-color);
-      padding: 25px;
-      margin: 30px 0;
-      border-radius: 0 10px 10px 0;
-    }
-    
-    .customization-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin: 40px 0;
-    }
-    
-    .option-card {
-      background: var(--white-color);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: var(--box-shadow);
-      border: 1px solid var(--border-color);
-    }
-    
-    .option-card h4 {
-      color: var(--title-color);
-      border-bottom: 2px solid var(--theme-color);
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      font-size: 20px;
-    }
-    
-    .checklist {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .checklist li {
-      padding: 10px 0;
-      border-bottom: 1px dashed var(--border-color);
-      position: relative;
-      padding-left: 25px;
-    }
-    
-    .checklist li:before {
-      content: "✓";
-      color: var(--theme-color);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-      top: 10px;
-    }
-    
-    .guide-section {
-      background: linear-gradient(135deg, var(--title-color) 0%, var(--theme-color) 100%);
-      color: var(--white-color);
-      padding: 50px;
-      border-radius: 15px;
-      margin: 50px 0;
-    }
-    
-    .guide-tabs {
-      display: flex;
-      gap: 10px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-    
-    .guide-tab {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: var(--white-color);
-      padding: 12px 25px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-weight: 500;
-    }
-    
-    .guide-tab:hover,
-    .guide-tab.active {
-      background: var(--white-color);
-      color: var(--title-color);
-      border-color: var(--white-color);
-    }
-    
-    .guide-content {
-      background: var(--white-color);
-      color: var(--body-color);
-      padding: 30px;
-      border-radius: 10px;
-      margin-top: 20px;
-      display: none;
-      animation: fadeIn 0.5s ease;
-    }
-    
-    .guide-content.active {
-      display: block;
-    }
-    
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .disclaimer {
-      background: #fff8e1;
-      border-left: 5px solid #ffb300;
-      padding: 25px;
-      margin: 50px 0;
-      font-style: italic;
-      border-radius: 0 10px 10px 0;
-      color: var(--body-color);
-    }
-    
-    @media (max-width: 991px) {
-      .product-table {
-        display: block;
-        overflow-x: auto;
-      }
-      
-      .customization-options {
-        grid-template-columns: 1fr;
-      }
-      
-      .guide-section {
-        padding: 30px 20px;
-      }
-      
-      .guide-tabs {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 10px;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .product-table th,
-      .product-table td {
-        padding: 12px 8px;
-        font-size: 14px;
-      }
-      
-      .option-card {
-        padding: 20px;
-      }
-      
-      .guide-content {
-        padding: 20px;
-      }
-    }
-    
-    .service--details {
-      padding: 100px 0;
-    }
-    
-    .space-top {
-      padding-top: 100px;
-    }
-    
-    .space-extra-bottom {
-      padding-bottom: 100px;
-    }
-  </style>
-  <style>
-    /* ================================
-   RESPONSIVE PARA GUIDE-SECTION
-   ================================ */
-
-/* Títulos blancos en móvil */
-@media (max-width: 768px) {
-  .guide-section h2,
-  .guide-section p.text-center {
-    color: var(--white-color) !important;
-  }
-}
-
-/* Ajustes responsivos generales */
-@media (max-width: 768px) {
-
-  /* La sección principal más compacta */
-  .guide-section {
-    padding: 30px 20px !important;
-    border-radius: 12px;
-  }
-
-  /* Títulos internos más legibles */
-  .guide-content h4 {
-    font-size: 18px;
-  }
-
-  /* =======================
-     TABS (botones del menú)
-     ======================= */
-
-  .guide-tabs {
-    display: flex;
-    flex-direction: column;      /* Apilados */
-    gap: 12px;
-    align-items: stretch;        /* Cada botón ocupa todo el ancho disponible */
-    margin-top: 25px;
-  }
-
-  .guide-tab {
-    width: 100%;
-    padding: 14px 20px;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.18);
-    border: 1px solid rgba(255,255,255,0.35);
-    backdrop-filter: blur(4px);
-  }
-
-  .guide-tab.active {
-    background: var(--white-color) !important;
-    color: var(--title-color) !important;
-    border-color: var(--white-color) !important;
-  }
-
-  /* =======================
-     CONTENIDO
-     ======================= */
-
-  .guide-content {
-    padding: 20px !important;
-    border-radius: 10px;
-  }
-
-  .guide-content ul li {
-    font-size: 15px;
-  }
-
-  /* Columnas en una sola columna */
-  .guide-content .row > div {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-/* =======================
-   RESPONSIVE EXTRA PEQUEÑO
-   (Teléfonos muy pequeños)
-   ======================= */
-
-@media (max-width: 480px) {
-  .guide-tab {
-    font-size: 15px;
-    padding: 12px 15px;
-  }
-
-  .guide-content h4 {
-    font-size: 17px;
-  }
-
-  .guide-section {
-    padding: 25px 15px !important;
-  }
-}
-
-  </style>
+  <link rel="stylesheet" href="assets/css/conpre-custom.css">
+  <link rel="stylesheet" href="assets/css/products.css">
 </head>
 
 <body>
-  <!--[if lte IE 9]>
-    	<p class="browserupgrade">Estás usando un navegador <strong>obsoleto</strong>. Por favor <a href="https://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia y seguridad.</p>
-  <![endif]-->
-  <!--********************************
-   		Code Start From Here 
-	******************************** -->
   <!--==============================
 	Preloader
 	==============================-->
   <div class="preloader">
-    <button class="vs-btn preloaderCls">Cancelar Preloader</button>
+    <button class="vs-btn preloaderCls">Omitir Carga</button>
     <div class="preloader-inner">
       <img src="assets/img/logo-black.png" alt="Conpre Concretos">
       <span class="loader"></span>
     </div>
   </div>
-  
-  <!-- ==============================
-    Popup Search Box
-    ============================== -->
+
+  <!-- Popup Search Box -->
   <div class="popup-search-box d-none d-lg-block">
     <button class="searchClose"><i class="fal fa-times"></i></button>
     <form action="#">
@@ -395,119 +76,104 @@
       <button type="submit"><i class="fal fa-search"></i></button>
     </form>
   </div>
-  
+
   <!--==============================
     Mobile Menu
-==============================-->
-<div class="vs-menu-wrapper">
-  <div class="vs-menu-area text-center">
-    <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
-    <div class="mobile-logo">
-      <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo"></a>
-    </div>
-    <div class="vs-mobile-menu">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="about.html">Nosotros</a></li>
-        <li><a href="services.html">Servicios</a></li>
-        <li><a href="products.html">Productos</a></li>
-        <li><a href="project.html">Proyectos</a></li>
-        <li><a href="contact.html">Contáctanos</a></li>
-      </ul>
+  ==============================-->
+  <div class="vs-menu-wrapper">
+    <div class="vs-menu-area text-center">
+      <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+      <div class="mobile-logo">
+        <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo"></a>
+      </div>
+      <div class="vs-mobile-menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="services.html">Servicios</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a href="project.html">Proyectos</a></li>
+          <li><a href="contact.html">Contáctanos</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
 
-<!--==============================
+  <!--==============================
     Sidemenu
-==============================-->
-<div class="sidemenu-wrapper d-none d-lg-block">
-  <div class="sidemenu-content">
-    <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-    <div class="widget">
-      <div class="vs-widget-about">
-        <div class="footer-logo">
-          <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo"></a>
-        </div>
-        <p>10 años de experiencia entregando soluciones en concreto para
-autoconstrucción, desarrollos residenciales y obra pública</p>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/p/Conpre-Concretos-100087959718875/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://wa.me/523141450638"><i class="fab fa-whatsapp fa-1x"></i></a>
+  ==============================-->
+  <div class="sidemenu-wrapper d-none d-lg-block">
+    <div class="sidemenu-content">
+      <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
+      <div class="widget">
+        <div class="vs-widget-about">
+          <div class="footer-logo">
+            <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo"></a>
+          </div>
+          <p>10 años de experiencia entregando soluciones en concreto para autoconstrucción, desarrollos residenciales y obra pública</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/p/Conpre-Concretos-100087959718875/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/523141450638"><i class="fab fa-whatsapp fa-1x"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="widget">
-      <h3 class="widget_title">Ubicación</h3>
-      <div class="footer-map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26058.977764082952!2d-104.32139011816301!3d19.12646135681042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8424d7f53c0e6c3f%3A0xdddf45db88ffe656!2sCONPRE%20Concretos!5e0!3m2!1ses!2smx!4v1765395861506!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+      <div class="widget">
+        <h3 class="widget_title">Ubicación</h3>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26058.977764082952!2d-104.32139011816301!3d19.12646135681042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8424d7f53c0e6c3f%3A0xdddf45db88ffe656!2sCONPRE%20Concretos!5e0!3m2!1ses!2smx!4v1765395861506!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
   </div>
 
-<!--==============================
+  <!--==============================
     Header Area
-==============================-->
-<header class="vs-header header-layout1">
-  <!-- Header Top -->
-  <div class="header-topper position-relative">
-    <div class="header-top d-none d-md-block">
-      <div class="container">
-        <div class="row align-items-center justify-content-center gy-1 text-center text-lg-start">
-          <div class="col-lg-5 col-auto d-none d-lg-block">
-            <p class="header-text"><span class="header-text__bullet"></span> 10 años de experiencia en concreto premezclado</p>
-          </div>
-          <div class="col-lg-7 col-auto text-end">
-            <p class="header-text header-info"><i class="fal fa-map-marker-alt"></i> Camino a Aguas Negras S/N, Manzanillo, Colima</p>
-            <p class="header-text header-info"><i class="fal fa-envelope"></i> <a href="mailto:info@conpreconcretos.com">info@conpreconcretos.com</a></p>
+  ==============================-->
+  <header class="vs-header header-layout1">
+    <div class="header-topper position-relative">
+      <div class="header-top d-none d-md-block">
+        <div class="container">
+          <div class="row align-items-center justify-content-end">
+            <div class="col-auto">
+              <p class="header-text header-info mb-0"><i class="fal fa-map-marker-alt"></i> Camino a Aguas Negras S/N, Manzanillo, Colima</p>
+            </div>
+            <div class="col-auto">
+              <p class="header-text header-info mb-0"><i class="fal fa-envelope"></i> <a href="mailto:admonconpre@gmail.com">admonconpre@gmail.com</a></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="sticky-wrapper">
-      <div class="sticky-active">
-        <div class="container">
-          <div class="menu-top">
-            <div class="row justify-content-center justify-content-sm-between align-items-center gx-sm-0">
-              <div class="col-lg-3 col-md-auto col">
-                <div class="header-logo">
-                  <a href="index.html"><img src="assets/img/logo.png" alt="Conpre" class="logo logo-white"></a>
-                </div>
-              </div>
-              <div class="col-lg-9 col-md-auto col">
-                <div class="row align-items-center justify-content-end">
-                  <div class="col-auto">
-                    <nav class="main-menu menu-style1 d-none d-lg-block">
-                      <ul class="main-menu__list">
-                        <li>
-                          <a href="index.html"><span class="has-new-lable">Inicio</span></a>
-                        </li>
-                        <li><a href="about.html">Nosotros</a></li>
-                        <li>
-                          <a href="services.html">Servicios</a>
-                        </li>
-                        <li><a href="products.html">Productos</a></li>
-                        <li><a href="project.html">Proyectos</a></li>
-                        <li><a href="contact.html">Contáctanos</a></li>
-                      </ul>
-                    </nav>
-                    <button class="vs-menu-toggle d-inline-block d-lg-none">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16.02" viewBox="0 0 38 16.02">
-                        <path d="M1268,206.78v-2h38v2Zm0-7.01v-2h38v2Zm0-7.01v-2h38v2Z" transform="translate(-1268 -190.76)" fill="currentColor"/>
-                      </svg>
-                    </button>
+      <div class="sticky-wrapper">
+        <div class="sticky-active">
+          <div class="container">
+            <div class="menu-top">
+              <div class="row justify-content-center justify-content-sm-between align-items-center gx-sm-0">
+                <div class="col-lg-3 col-md-auto col">
+                  <div class="header-logo">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="Conpre" class="logo logo-white"></a>
                   </div>
-                  <div class="col-auto d-none d-md-block">
-                    <div class="header-btns">
-                      <div class="d-none d-lg-inline-block">
-                        <button class="sideMenuToggler"><i>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16.02" viewBox="0 0 38 16.02">
-                            <path d="M1268,206.78v-2h38v2Zm0-7.01v-2h38v2Zm0-7.01v-2h38v2Z" transform="translate(-1268 -190.76)" fill="currentColor"/>
-                          </svg>
-                        </i></button>
-                      </div>
-                      <a href="contact.html#cotizacion" class="vs-btn d-none d-vc-sm-block">
+                </div>
+                <div class="col-lg-9 col-md-auto col">
+                  <div class="row align-items-center justify-content-end">
+                    <div class="col-auto">
+                      <nav class="main-menu menu-style1 d-none d-lg-block">
+                        <ul class="main-menu__list">
+                          <li><a href="index.html"><span class="has-new-lable">Inicio</span></a></li>
+                          <li><a href="about.html">Nosotros</a></li>
+                          <li><a href="services.html">Servicios</a></li>
+                          <li><a href="products.html">Productos</a></li>
+                          <li><a href="project.html">Proyectos</a></li>
+                          <li><a href="contact.html">Contáctanos</a></li>
+                        </ul>
+                      </nav>
+                      <button class="vs-menu-toggle d-inline-block d-lg-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16.02" viewBox="0 0 38 16.02">
+                          <path d="M1268,206.78v-2h38v2Zm0-7.01v-2h38v2Zm0-7.01v-2h38v2Z" transform="translate(-1268 -190.76)" fill="currentColor"/>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                      <a href="contact.html#cotizacion" class="vs-btn">
                         <span class="vs-btn__bar"></span>
                         Cotizar Proyecto
                       </a>
@@ -520,13 +186,11 @@ autoconstrucción, desarrollos residenciales y obra pública</p>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-  
   <!--==============================
     Breadcumb
-    ============================== -->
+  ============================== -->
   <div class="breadcumb-wrapper" data-bg-src="assets/img/breadcumb/breadcumb-bg.jpg">
     <div class="container z-index-common">
       <div class="breadcumb-content">
@@ -542,300 +206,696 @@ autoconstrucción, desarrollos residenciales y obra pública</p>
       </div>
     </div>
   </div>
-  
-  <!-- SECCIÓN PRINCIPAL DE PRODUCTOS -->
-  <div class="service--details space-top space-extra-bottom">
+
+  <!--==============================
+    Navegación Sticky de Productos
+  ============================== -->
+  <nav class="products-nav">
     <div class="container">
-      
-      <!-- 4.2 Introducción -->
-      <div class="row mb-50">
-        <div class="col-12">
-          <div class="text-center">
-            <h2 class="h1 mb-30">El Concreto Adecuado para Cada Aplicación</h2>
-            <p class="lead mb-0">No todos los proyectos son iguales, y no todos requieren el mismo tipo de concreto. En Conpre Concretos ofrecemos un catálogo completo de productos, desde concretos de resistencia básica hasta soluciones especializadas de ultra-alta resistencia, concretos para pavimentos y opciones personalizadas con impermeabilizantes, resistencias rápidas y aditivos especiales.</p>
+      <ul class="products-nav-list">
+        <li class="products-nav-item">
+          <a href="#fc" class="products-nav-link active">
+            <i class="fal fa-cube"></i>
+            <span>Concreto F'c</span>
+          </a>
+        </li>
+        <li class="products-nav-item">
+          <a href="#mr" class="products-nav-link">
+            <i class="fal fa-road"></i>
+            <span>Pavimentos MR</span>
+          </a>
+        </li>
+        <li class="products-nav-item">
+          <a href="#especiales" class="products-nav-link">
+            <i class="fal fa-flask"></i>
+            <span>Especiales</span>
+          </a>
+        </li>
+        <li class="products-nav-item">
+          <a href="#personaliza" class="products-nav-link">
+            <i class="fal fa-sliders-h"></i>
+            <span>Personaliza</span>
+          </a>
+        </li>
+        <li class="products-nav-item">
+          <a href="#guia" class="products-nav-link">
+            <i class="fal fa-question-circle"></i>
+            <span>Guía</span>
+          </a>
+        </li>
+      </ul>
+      <div class="products-nav-cta">
+        <a href="contact.html#cotizacion" class="vs-btn">
+          <span class="vs-btn__bar"></span>
+          Cotizar Ahora
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!--==============================
+    Introducción
+  ============================== -->
+  <section class="products-intro">
+    <div class="container">
+      <h2>El Concreto Adecuado para Cada Aplicación</h2>
+      <p>No todos los proyectos son iguales. Encuentra el concreto ideal para tu obra con nuestro catálogo completo: desde resistencias básicas hasta soluciones de ultra-alta resistencia.</p>
+    </div>
+  </section>
+
+  <!--==============================
+    Filtros por Aplicación
+  ============================== -->
+  <section class="products-filters">
+    <div class="container">
+      <div class="filters-container">
+        <span class="filters-label">Filtrar por uso:</span>
+        <button class="filter-btn active" data-filter="all">
+          <i class="fal fa-th"></i> Todos
+        </button>
+        <button class="filter-btn" data-filter="vivienda">
+          <i class="fal fa-home"></i> Vivienda
+        </button>
+        <button class="filter-btn" data-filter="comercial">
+          <i class="fal fa-building"></i> Comercial
+        </button>
+        <button class="filter-btn" data-filter="industrial">
+          <i class="fal fa-industry"></i> Industrial
+        </button>
+        <button class="filter-btn" data-filter="infraestructura">
+          <i class="fal fa-road"></i> Infraestructura
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!--==============================
+    Categoría 1: Concreto F'c
+  ============================== -->
+  <section class="products-category" id="fc">
+    <div class="container">
+      <div class="category-header">
+        <span class="category-badge">Estructural</span>
+        <h2><i class="fal fa-cube"></i> Concreto por Resistencia (F'c)</h2>
+        <p>El concreto F'c se mide por su resistencia a la compresión en kg/cm² a los 28 días. Es el más utilizado para elementos estructurales como columnas, trabes, losas y cimientos.</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- F'c 100 -->
+        <div class="product-card" data-category="vivienda">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Básico</span>
           </div>
-        </div>
-      </div>
-      
-      <!-- 4.3 Categoría 1 - Concreto por Resistencia (F'c) -->
-      <div class="mb-60" id="f-c">
-        <h2 class="category-title h2 mb-40">Concreto por Resistencia a la Compresión (F'c)</h2>
-        <p class="mb-30">El concreto F'c se mide por su resistencia a la compresión en kg/cm² a los 28 días. Es el más utilizado para elementos estructurales como columnas, trabes, losas y cimientos.</p>
-        
-        <div class="table-responsive">
-          <table class="product-table">
-            <thead>
-              <tr>
-                <th width="25%">Producto</th>
-                <th width="20%">Resistencia</th>
-                <th width="55%">Aplicaciones Típicas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Concreto F'c 100 kg/cm²</strong></td>
-                <td>Baja resistencia</td>
-                <td>Rellenos, plantillas de nivelación, pisos no estructurales</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 150 kg/cm²</strong></td>
-                <td>Resistencia moderada</td>
-                <td>Banquetas, guarniciones, firmes ligeros, contrapisos</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 200 kg/cm²</strong></td>
-                <td>Resistencia estándar</td>
-                <td>Losas de vivienda, pisos residenciales, cimentaciones superficiales</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 250 kg/cm²</strong></td>
-                <td>Resistencia media-alta</td>
-                <td>Columnas, trabes residenciales, losas de azotea, estructuras de 1-2 niveles</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 300 kg/cm²</strong></td>
-                <td>Alta resistencia</td>
-                <td>Estructuras de varios niveles, cimentaciones profundas, edificios comerciales</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 350 kg/cm²</strong></td>
-                <td>Muy alta resistencia</td>
-                <td>Edificios de altura, puentes, estructuras sometidas a cargas elevadas</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 400 kg/cm²</strong></td>
-                <td>Resistencia premium</td>
-                <td>Infraestructura crítica, proyectos de ingeniería especializada</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto F'c 500 kg/cm²</strong></td>
-                <td>Resistencia ultra-alta</td>
-                <td>Proyectos especiales de alta exigencia estructural</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      
-      <!-- 4.4 Categoría 2 - Concreto para Pavimentos (MR) -->
-      <div class="mb-60" id="mr">
-        <h2 class="category-title h2 mb-40">Concreto para Pavimentos (MR - Módulo de Ruptura)</h2>
-        <p class="mb-30">El concreto MR se mide por su resistencia a la flexión (kg/cm²) y está diseñado específicamente para pavimentos, pisos industriales y superficies que soportan tráfico vehicular.</p>
-        
-        <div class="table-responsive">
-          <table class="product-table">
-            <thead>
-              <tr>
-                <th width="30%">Producto</th>
-                <th width="20%">Módulo de Ruptura</th>
-                <th width="50%">Aplicación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Concreto MR 35</strong></td>
-                <td>35 kg/cm²</td>
-                <td>Pavimentos ligeros, accesos peatonales, banquetas</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto MR 38</strong></td>
-                <td>38 kg/cm²</td>
-                <td>Pavimentos estándar, calles residenciales</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto MR 40</strong></td>
-                <td>40 kg/cm²</td>
-                <td>Pavimentos medianos, estacionamientos comerciales</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto MR 42</strong></td>
-                <td>42 kg/cm²</td>
-                <td>Pavimentos pesados, vías urbanas con tráfico constante</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto MR 45</strong></td>
-                <td>45 kg/cm²</td>
-                <td>Pavimentos industriales, naves, zonas de carga</td>
-              </tr>
-              <tr>
-                <td><strong>Concreto MR 48</strong></td>
-                <td>48 kg/cm²</td>
-                <td>Pavimentos ultra-resistentes, zonas de alto tráfico pesado</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      
-      <!-- 4.5 Categoría 3 - Otros Productos -->
-      <div class="mb-60" id="otros">
-        <h2 class="category-title h2 mb-40">Otros Productos</h2>
-        
-        <div class="product-feature">
-          <div class="row align-items-center">
-            <div class="col-md-3 text-center mb-30 mb-md-0">
-              <span style="font-size: 4rem;">🧱</span>
-            </div>
-            <div class="col-md-9">
-              <h3 class="h4 mb-20">Mortero Fluido 80kg</h3>
-              <p class="mb-20">Mortero auto-nivelante de alta fluidez. Ideal para rellenos, nivelaciones y reparaciones. Fácil aplicación, sin necesidad de vibrado. Resistencia adecuada para aplicaciones no estructurales.</p>
-              <h4 class="h5 mb-15">APLICACIONES:</h4>
-              <div class="list-style3">
-                <ul class="list-unstyled">
-                  <li>Rellenos de cavidades</li>
-                  <li>Nivelación de pisos</li>
-                  <li>Reparaciones de superficies</li>
-                  <li>Relleno de espacios en instalaciones</li>
-                </ul>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Baja resistencia</span>
+            <h3 class="product-card-title">F'c 100 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>12.5%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 12.5%;"></div>
               </div>
             </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Rellenos, plantillas de nivelación, pisos no estructurales
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 150 -->
+        <div class="product-card" data-category="vivienda">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Ligero</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Resistencia moderada</span>
+            <h3 class="product-card-title">F'c 150 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>18.75%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 18.75%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Banquetas, guarniciones, firmes ligeros, contrapisos
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 200 -->
+        <div class="product-card" data-category="vivienda">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Estándar</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Resistencia estándar</span>
+            <h3 class="product-card-title">F'c 200 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>25%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 25%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Losas de vivienda, pisos residenciales, cimentaciones superficiales
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 250 -->
+        <div class="product-card" data-category="vivienda comercial">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Popular</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Resistencia media-alta</span>
+            <h3 class="product-card-title">F'c 250 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>31.25%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 31.25%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Columnas, trabes residenciales, losas de azotea, estructuras 1-2 niveles
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 300 -->
+        <div class="product-card" data-category="comercial industrial">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Alta</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Alta resistencia</span>
+            <h3 class="product-card-title">F'c 300 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>37.5%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 37.5%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Estructuras de varios niveles, cimentaciones profundas, edificios comerciales
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 350 -->
+        <div class="product-card" data-category="comercial industrial infraestructura">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Premium</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Muy alta resistencia</span>
+            <h3 class="product-card-title">F'c 350 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>43.75%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 43.75%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Edificios de altura, puentes, estructuras con cargas elevadas
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 400 -->
+        <div class="product-card" data-category="industrial infraestructura">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Especial</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Resistencia premium</span>
+            <h3 class="product-card-title">F'c 400 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>50%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 50%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Infraestructura crítica, proyectos de ingeniería especializada
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- F'c 500 -->
+        <div class="product-card" data-category="infraestructura">
+          <div class="product-card-image">
+            <i class="fal fa-layer-group"></i>
+            <span class="product-card-badge">Ultra</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Resistencia ultra-alta</span>
+            <h3 class="product-card-title">F'c 500 kg/cm²</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Resistencia</span>
+                <span>62.5%</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 62.5%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Proyectos especiales de alta exigencia estructural
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- 4.6 Opciones de Personalización -->
-      <div class="mb-60" id="personaliza">
-        <h2 class="category-title h2 mb-40">Personaliza Tu Concreto</h2>
-        <p class="mb-40">Además de elegir la resistencia adecuada, puedes personalizar tu concreto con opciones de tiempo de fraguado y aditivos especiales según las necesidades de tu proyecto.</p>
-        
-        <div class="customization-options">
-          <div class="option-card">
-            <h4>Opciones de Tiempo de Fraguado</h4>
-            <ul class="checklist mb-30">
-              <li><strong>Resistencia Normal (28 días)</strong> - Estándar, costo optimizado</li>
-              <li><strong>Resistencia Rápida 14 días</strong> - Reducción de tiempos moderada</li>
-              <li><strong>Resistencia Rápida 7 días</strong> - Ideal para proyectos con plazos ajustados</li>
-              <li><strong>Resistencia Rápida 3 días</strong> - Obras urgentes, remodelaciones</li>
-              <li><strong>Resistencia Rápida 2 días</strong> - Proyectos express</li>
-              <li><strong>Resistencia Rápida 1 día</strong> - Ultra-rápida, situaciones críticas</li>
+    </div>
+  </section>
+
+  <!--==============================
+    Categoría 2: Pavimentos MR
+  ============================== -->
+  <section class="products-category" id="mr">
+    <div class="container">
+      <div class="category-header">
+        <span class="category-badge">Pavimentos</span>
+        <h2><i class="fal fa-road"></i> Concreto para Pavimentos (MR)</h2>
+        <p>El concreto MR se mide por su resistencia a la flexión (kg/cm²) y está diseñado para pavimentos, pisos industriales y superficies con tráfico vehicular.</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- MR 35 -->
+        <div class="product-card" data-category="vivienda">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #2d3e4f 0%, #1b2a38 100%);">
+            <i class="fal fa-road"></i>
+            <span class="product-card-badge">Ligero</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">MR 35 kg/cm²</span>
+            <h3 class="product-card-title">Pavimento Ligero</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Módulo de Ruptura</span>
+                <span>35</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 35%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Pavimentos ligeros, accesos peatonales, banquetas
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MR 38 -->
+        <div class="product-card" data-category="vivienda">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #2d3e4f 0%, #1b2a38 100%);">
+            <i class="fal fa-road"></i>
+            <span class="product-card-badge">Estándar</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">MR 38 kg/cm²</span>
+            <h3 class="product-card-title">Pavimento Estándar</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Módulo de Ruptura</span>
+                <span>38</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 45%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Pavimentos estándar, calles residenciales
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MR 40 -->
+        <div class="product-card" data-category="comercial">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #2d3e4f 0%, #1b2a38 100%);">
+            <i class="fal fa-road"></i>
+            <span class="product-card-badge">Comercial</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">MR 40 kg/cm²</span>
+            <h3 class="product-card-title">Pavimento Mediano</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Módulo de Ruptura</span>
+                <span>40</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 55%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Pavimentos medianos, estacionamientos comerciales
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MR 42 -->
+        <div class="product-card" data-category="comercial infraestructura">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #2d3e4f 0%, #1b2a38 100%);">
+            <i class="fal fa-road"></i>
+            <span class="product-card-badge">Pesado</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">MR 42 kg/cm²</span>
+            <h3 class="product-card-title">Pavimento Pesado</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Módulo de Ruptura</span>
+                <span>42</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 65%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Pavimentos pesados, vías urbanas con tráfico constante
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MR 45 -->
+        <div class="product-card" data-category="industrial">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #2d3e4f 0%, #1b2a38 100%);">
+            <i class="fal fa-road"></i>
+            <span class="product-card-badge">Industrial</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">MR 45 kg/cm²</span>
+            <h3 class="product-card-title">Pavimento Industrial</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Módulo de Ruptura</span>
+                <span>45</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Pavimentos industriales, naves, zonas de carga
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MR 48 -->
+        <div class="product-card" data-category="industrial infraestructura">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #2d3e4f 0%, #1b2a38 100%);">
+            <i class="fal fa-road"></i>
+            <span class="product-card-badge">Ultra</span>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">MR 48 kg/cm²</span>
+            <h3 class="product-card-title">Pavimento Ultra</h3>
+            <div class="resistance-bar">
+              <div class="resistance-bar-label">
+                <span>Módulo de Ruptura</span>
+                <span>48</span>
+              </div>
+              <div class="resistance-bar-track">
+                <div class="resistance-bar-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Pavimentos ultra-resistentes, zonas de alto tráfico pesado
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Cotizar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==============================
+    Categoría 3: Productos Especiales
+  ============================== -->
+  <section class="products-category" id="especiales">
+    <div class="container">
+      <div class="category-header">
+        <span class="category-badge">Especializado</span>
+        <h2><i class="fal fa-flask"></i> Productos Especiales</h2>
+        <p>Soluciones específicas para aplicaciones que requieren características particulares.</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Mortero Fluido -->
+        <div class="product-card product-card-featured" data-category="vivienda comercial">
+          <div class="product-card-image" style="background: linear-gradient(135deg, #00a550 0%, #008540 100%);">
+            <i class="fal fa-tint"></i>
+          </div>
+          <div class="product-card-body">
+            <span class="product-card-subtitle">Auto-nivelante</span>
+            <h3 class="product-card-title">Mortero Fluido 80kg</h3>
+            <div class="product-card-apps" style="margin-bottom: 15px;">
+              <strong>Descripción:</strong>
+              Mortero auto-nivelante de alta fluidez. Ideal para rellenos, nivelaciones y reparaciones. Fácil aplicación, sin necesidad de vibrado. Resistencia adecuada para aplicaciones no estructurales.
+            </div>
+            <div class="product-card-apps">
+              <strong>Aplicaciones:</strong>
+              Rellenos de cavidades, nivelación de pisos, reparaciones de superficies, relleno de espacios en instalaciones
+            </div>
+            <div class="product-card-footer">
+              <a href="contact.html#cotizacion" class="product-card-btn primary">Solicitar Cotización</a>
+              <a href="tel:+523141450638" class="product-card-btn secondary"><i class="fal fa-phone"></i> Llamar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==============================
+    Sección: Personaliza tu Concreto
+  ============================== -->
+  <section class="products-customize" id="personaliza">
+    <div class="container">
+      <h2>Personaliza Tu Concreto</h2>
+      <p>Además de elegir la resistencia adecuada, puedes personalizar tu concreto con opciones de tiempo de fraguado y aditivos especiales.</p>
+
+      <div class="customize-grid">
+        <div class="customize-card">
+          <h3><i class="fal fa-clock"></i> Opciones de Tiempo de Fraguado</h3>
+          <ul class="customize-list">
+            <li><i class="fal fa-check"></i> <strong>Normal (28 días)</strong> - Estándar, costo optimizado</li>
+            <li><i class="fal fa-check"></i> <strong>Rápida 14 días</strong> - Reducción de tiempos moderada</li>
+            <li><i class="fal fa-check"></i> <strong>Rápida 7 días</strong> - Proyectos con plazos ajustados</li>
+            <li><i class="fal fa-check"></i> <strong>Rápida 3 días</strong> - Obras urgentes, remodelaciones</li>
+            <li><i class="fal fa-check"></i> <strong>Rápida 2 días</strong> - Proyectos express</li>
+            <li><i class="fal fa-check"></i> <strong>Rápida 1 día</strong> - Ultra-rápida, situaciones críticas</li>
+          </ul>
+          <div class="customize-note">
+            <strong>Nota:</strong> Las resistencias rápidas utilizan aditivos acelerantes de fraguado SIKA. Consulta con nuestro equipo técnico.
+          </div>
+        </div>
+
+        <div class="customize-card">
+          <h3><i class="fal fa-cogs"></i> Aditivos y Modificadores</h3>
+          <ul class="customize-list">
+            <li><i class="fal fa-check"></i> <strong>Impermeabilizante Integral</strong> - Cisternas, cimientos, sótanos</li>
+            <li><i class="fal fa-check"></i> <strong>Fibra de Polipropileno</strong> - Control de fisuras, mayor tenacidad</li>
+            <li><i class="fal fa-check"></i> <strong>Grava 3/8"</strong> - Granulometría para aplicaciones particulares</li>
+            <li><i class="fal fa-check"></i> <strong>Color Integral</strong> - Pigmentación del concreto</li>
+            <li><i class="fal fa-check"></i> <strong>Revenimiento 14cm</strong> - Trabajabilidad media</li>
+            <li><i class="fal fa-check"></i> <strong>Revenimiento 18cm</strong> - Alta trabajabilidad para bombeo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==============================
+    Sección: Guía de Selección
+  ============================== -->
+  <section class="products-guide" id="guia">
+    <div class="container">
+      <h2>¿Cómo Elegir el Concreto Adecuado?</h2>
+      <p>Recomendaciones según el tipo de proyecto que vas a realizar</p>
+
+      <div class="guide-tabs-container">
+        <button class="guide-tab-btn active" data-target="panel-vivienda">
+          <i class="fal fa-home"></i> Vivienda
+        </button>
+        <button class="guide-tab-btn" data-target="panel-comercial">
+          <i class="fal fa-building"></i> Comercial
+        </button>
+        <button class="guide-tab-btn" data-target="panel-infraestructura">
+          <i class="fal fa-road"></i> Infraestructura
+        </button>
+      </div>
+
+      <!-- Panel Vivienda -->
+      <div class="guide-panel active" id="panel-vivienda">
+        <h3><i class="fal fa-home"></i> Vivienda Residencial (1-2 niveles)</h3>
+        <div class="guide-recommendations">
+          <div class="guide-rec-list">
+            <h4>Recomendaciones:</h4>
+            <ul>
+              <li><strong>Cimientos:</strong> F'c 200-250 kg/cm²</li>
+              <li><strong>Columnas y trabes:</strong> F'c 250-300 kg/cm²</li>
+              <li><strong>Losas:</strong> F'c 200-250 kg/cm²</li>
+              <li><strong>Pisos y firmes:</strong> F'c 150-200 kg/cm²</li>
+              <li><strong>Banquetas:</strong> F'c 150 kg/cm²</li>
             </ul>
-            <div class="alert alert-info mb-0">
-              <p class="mb-0"><small><strong>Nota:</strong> Las resistencias rápidas utilizan aditivos acelerantes de fraguado SIKA. Consulta con nuestro equipo técnico para determinar la opción ideal según tu cronograma de obra.</small></p>
-            </div>
           </div>
-          
-          <div class="option-card">
-            <h4>Aditivos y Modificadores Disponibles</h4>
-            <ul class="checklist mb-0">
-              <li><strong>Impermeabilizante Integral</strong> - Para cisternas, cimientos, sótanos, contacto con agua</li>
-              <li><strong>Fibra de Polipropileno</strong> - Control de fisuras por contracción, mayor tenacidad</li>
-              <li><strong>Grava 3/8"</strong> - Granulometría específica para aplicaciones particulares</li>
-              <li><strong>Color Integral</strong> - Pigmentación del concreto (disponibilidad de colores por consultar)</li>
-              <li><strong>Revenimiento Controlado 14cm</strong> - Trabajabilidad media</li>
-              <li><strong>Revenimiento Controlado 18cm</strong> - Alta trabajabilidad para bombeo</li>
+          <div class="guide-tip">
+            <h4><i class="fal fa-lightbulb"></i> Tip Profesional</h4>
+            <p>Agrega impermeabilizante integral en cimientos y cisternas para mayor durabilidad y protección contra humedad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel Comercial -->
+      <div class="guide-panel" id="panel-comercial">
+        <h3><i class="fal fa-building"></i> Obra Comercial e Industrial</h3>
+        <div class="guide-recommendations">
+          <div class="guide-rec-list">
+            <h4>Recomendaciones:</h4>
+            <ul>
+              <li><strong>Estructuras (columnas, trabes):</strong> F'c 300-400 kg/cm²</li>
+              <li><strong>Pisos industriales:</strong> MR 45-48</li>
+              <li><strong>Estacionamientos:</strong> MR 40-42</li>
+              <li><strong>Cimentaciones:</strong> F'c 300-350 kg/cm²</li>
             </ul>
           </div>
-        </div>
-      </div>
-      
-      <!-- 4.7 Guía de Selección -->
-      <div class="guide-section mb-60">
-        <h2 class="text-center mb-30" style="color: white;">¿Cómo Elegir el Concreto Adecuado?</h2>
-        <p class="text-center mb-40">Recomendaciones por tipo de proyecto</p>
-        
-        <div class="guide-tabs">
-          <button class="guide-tab active" data-target="guide1">Vivienda Residencial</button>
-          <button class="guide-tab" data-target="guide2">Obra Comercial</button>
-          <button class="guide-tab" data-target="guide3">Infraestructura</button>
-        </div>
-        
-        <div class="guide-content active" id="guide1">
-          <h4 class="mb-20">Vivienda Residencial (1-2 niveles)</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <h5 class="mb-15">Recomendaciones:</h5>
-              <div class="list-style5">
-                <ul class="list-unstyled">
-                  <li><strong>Cimientos:</strong> F'c 200-250 kg/cm²</li>
-                  <li><strong>Columnas y trabes:</strong> F'c 250-300 kg/cm²</li>
-                  <li><strong>Losas:</strong> F'c 200-250 kg/cm²</li>
-                  <li><strong>Pisos y firmes:</strong> F'c 150-200 kg/cm²</li>
-                  <li><strong>Banquetas:</strong> F'c 150 kg/cm²</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="bg-light p-20 rounded">
-                <h5 class="mb-15">Opcional:</h5>
-                <p class="mb-0">Impermeabilizante integral en cimientos y cisternas para mayor durabilidad y protección contra humedad.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="guide-content" id="guide2">
-          <h4 class="mb-20">Obra Comercial e Industrial</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <h5 class="mb-15">Recomendaciones:</h5>
-              <div class="list-style5">
-                <ul class="list-unstyled">
-                  <li><strong>Estructuras (columnas, trabes):</strong> F'c 300-400 kg/cm²</li>
-                  <li><strong>Pisos industriales:</strong> MR 45-48</li>
-                  <li><strong>Estacionamientos:</strong> MR 40-42</li>
-                  <li><strong>Cimentaciones:</strong> F'c 300-350 kg/cm²</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="bg-light p-20 rounded">
-                <h5 class="mb-15">Opcional:</h5>
-                <p class="mb-0">Resistencia rápida para reducir tiempos de obra y fibra de polipropileno en pisos industriales para control de fisuras.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="guide-content" id="guide3">
-          <h4 class="mb-20">Infraestructura y Obra Pública</h4>
-          <div class="row">
-            <div class="col-md-6">
-              <h5 class="mb-15">Recomendaciones:</h5>
-              <div class="list-style5">
-                <ul class="list-unstyled">
-                  <li><strong>Puentes y viaductos:</strong> F'c 350-400 kg/cm²</li>
-                  <li><strong>Carreteras y vialidades:</strong> MR 40-48</li>
-                  <li><strong>Obras hidráulicas:</strong> F'c 300-350 kg/cm² + impermeabilizante</li>
-                  <li><strong>Túneles:</strong> Concreto lanzado con fibra</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="bg-light p-20 rounded">
-                <h5 class="mb-15">Importante:</h5>
-                <p class="mb-0">Consulta las especificaciones técnicas específicas del proyecto. Para infraestructura crítica, recomendamos análisis técnico detallado.</p>
-              </div>
-            </div>
+          <div class="guide-tip">
+            <h4><i class="fal fa-lightbulb"></i> Tip Profesional</h4>
+            <p>Usa resistencia rápida para reducir tiempos de obra y fibra de polipropileno en pisos industriales para control de fisuras.</p>
           </div>
         </div>
       </div>
-      
-      <!-- NOTA IMPORTANTE (4.8) -->
-      
-      <!-- Nota importante -->
-      <div class="disclaimer">
-        <p class="mb-0"><strong>NOTA IMPORTANTE:</strong> Los precios de nuestros productos se determinan según el tipo de concreto, volumen requerido, ubicación del proyecto y especificaciones adicionales (resistencia rápida, aditivos, tipo de entrega). Contáctanos para una cotización personalizada y exacta.</p>
+
+      <!-- Panel Infraestructura -->
+      <div class="guide-panel" id="panel-infraestructura">
+        <h3><i class="fal fa-road"></i> Infraestructura y Obra Pública</h3>
+        <div class="guide-recommendations">
+          <div class="guide-rec-list">
+            <h4>Recomendaciones:</h4>
+            <ul>
+              <li><strong>Puentes y viaductos:</strong> F'c 350-400 kg/cm²</li>
+              <li><strong>Carreteras y vialidades:</strong> MR 40-48</li>
+              <li><strong>Obras hidráulicas:</strong> F'c 300-350 kg/cm² + impermeabilizante</li>
+              <li><strong>Túneles:</strong> Concreto lanzado con fibra</li>
+            </ul>
+          </div>
+          <div class="guide-tip">
+            <h4><i class="fal fa-exclamation-triangle"></i> Importante</h4>
+            <p>Consulta las especificaciones técnicas específicas del proyecto. Para infraestructura crítica, recomendamos análisis técnico detallado.</p>
+          </div>
+        </div>
       </div>
-      
+    </div>
+  </section>
+
+  <!--==============================
+    Disclaimer
+  ============================== -->
+  <div class="container">
+    <div class="products-disclaimer">
+      <p><strong>NOTA IMPORTANTE:</strong> Los precios de nuestros productos se determinan según el tipo de concreto, volumen requerido, ubicación del proyecto y especificaciones adicionales (resistencia rápida, aditivos, tipo de entrega). Contáctanos para una cotización personalizada y exacta.</p>
     </div>
   </div>
-  
-   <!--==============================
+
+  <!--==============================
     Call to action
-    ==============================-->
+  ==============================-->
   <div class="quote--layout1 z-index-common overflow-hidden" data-bg-src="assets/img/bg/bg-1.jpg">
     <div class="quote__shape position-absolute start-0 top-0 bottom-0 z-index-n1">
       <svg width="929" height="771.999" viewBox="0 0 929 771.999">
-        <path id="Rectangle_523_copy" data-name="Rectangle 523 copy" d="M0,7286H636.73L929,8058,0,8056Z" transform="translate(0 -7286)" fill="#fc6601" />
+        <path id="Rectangle_523_copy" data-name="Rectangle 523 copy" d="M0,7286H636.73L929,8058,0,8056Z" transform="translate(0 -7286)" fill="#00a550" />
       </svg>
     </div>
     <div class="quote__img position-absolute bottom-0">
-      <img src="assets/img/quote/quote-img-1.png" alt="quote-img-1">
+      <img src="assets/img/quote/quote-img-1.png" alt="Cotización Conpre Concretos" loading="lazy">
     </div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <form action="https://html.vecurosoft.com/consik/demo/mail.php" class="form--style2 z-index-common" data-bg-src="assets/img/textures/quote-textures.svg">
+          <div class="form--style2 z-index-common" data-bg-src="assets/img/textures/quote-textures.svg">
             <div class="position-absolute end-0 bottom-0">
               <svg width="464.008" height="109" viewBox="0 0 464.008 109">
                 <g transform="translate(-628.996 -7868)">
@@ -846,208 +906,251 @@ autoconstrucción, desarrollos residenciales y obra pública</p>
             </div>
             <span class="sec-subtitle"></span>
             <h2 class="sec-title mb-1">¿Necesitas Concreto para tu Proyecto?</h2>
-            <p class="sec-text">ontáctanos para una cotización personalizada y sin compromiso</p>
+            <p class="sec-text">Contáctanos para una cotización personalizada y sin compromiso</p>
             <div class="row gx-20">
               <div class="col-12 form-group">
                 <a style="margin: 2%;" href="contact.html#cotizacion" class="vs-btn" tabindex="0">
                   <span class="vs-btn__bar"></span>
                   Solicitar Cotización
                 </a>
-                <a href="" class="vs-btn" tabindex="0">
+                <a href="tel:+523141450638" class="vs-btn" tabindex="0">
                   <span class="vs-btn__bar"></span>
-                  Llamar Ahora
+                  <i class="fas fa-phone me-2"></i>Llamar Ahora
                 </a>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!--==============================
     Footer Area
-==============================-->
-<footer class="footer-layout--style z-index-common">
-  <div class="footer-layout__bg" data-bg-src="assets/img/footer/footer-bg-h1.jpg"></div>
-  <div class="container">
-    <div class="footer-layout__top">
-      <div class="row justify-content-center justify-content-lg-between">
-
-        <!-- Columna 1: Sobre Conpre -->
-        <div class="col-md-12 col-lg-3 col-xl-3">
-          <div class="widget footer-widget">
-            <h3 class="widget_title">Sobre Conpre</h3>
-            <div class="vs-widget-about">
-              <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo" style="max-width:180px;"></a>
-              <p class="footer-text">
-                Conpre Concretos es una empresa 100% manzanillense con 10 años de experiencia en la producción y entrega de concreto premezclado de calidad certificada.
-              </p>
-            </div>
-            <div class="footer-social">
-              <!-- PENDIENTE: Agregar redes si existen -->
-              <a href="https://www.facebook.com/p/Conpre-Concretos-100087959718875/"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://wa.me/523141450638"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna 2: Enlaces Rápidos -->
-        <div class="col-md-12 col-lg-3 col-xl-3">
-          <div class="widget footer-widget">
-            <h3 class="widget_title">Enlaces Rápidos</h3>
-            <div class="footer-menu--style">
-              <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Nosotros</a></li>
-                <li><a href="services.html">Servicios</a></li>
-                <li><a href="products.html">Productos</a></li>
-                <li><a href="projects.html">Proyectos</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna 3: Nuestros Productos -->
-        <div class="col-md-12 col-lg-3 col-xl-3">
-          <div class="widget footer-widget">
-            <h3 class="widget_title">Nuestros Productos</h3>
-            <div class="footer-menu--style">
-              <ul>
-                <li><a href="products.html#fc">Concreto F’c</a></li>
-                <li><a href="products.html#mr">Concreto MR</a></li>
-                <li><a href="products.html#mortero">Mortero Fluido</a></li>
-                <li><a href="services.html#bombeado">Servicio de Bombeo</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Columna 4: Contacto -->
-        <div class="col-md-12 col-lg-3 col-xl-3">
-          <div class="widget footer-widget">
-            <h3 class="widget_title">Contacto</h3>
-            <div class="footer-info--style2">
-              <div class="footer-info_icon">
-                <i><img src="assets/img/icons/location-info.svg" alt="location info"></i>
+  ==============================-->
+  <footer class="footer-layout--style z-index-common">
+    <div class="footer-layout__bg" data-bg-src="assets/img/footer/footer-bg-h1.jpg"></div>
+    <div class="container">
+      <div class="footer-layout__top">
+        <div class="row justify-content-center justify-content-lg-between">
+          <!-- Columna 1: Sobre Conpre -->
+          <div class="col-md-12 col-lg-3 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Sobre Conpre</h3>
+              <div class="vs-widget-about">
+                <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo" style="max-width:180px;"></a>
+                <p class="footer-text">
+                  Conpre Concretos es una empresa 100% manzanillense con 10 años de experiencia en la producción y entrega de concreto premezclado de calidad certificada.
+                </p>
               </div>
-              <div class="media-body">
-                <div class="footer-info_link">Camino a Aguas Negras S/N, Manzanillo, Colima</div>
+              <div class="footer-social">
+                <a href="https://www.facebook.com/p/Conpre-Concretos-100087959718875/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/523141450638"><i class="fab fa-whatsapp"></i></a>
               </div>
             </div>
-            <div class="footer-info--style2 pt-3">
-              <div class="footer-info_icon">
-                <i><img src="assets/img/icons/phone-info.svg" alt="phone icon"></i>
+          </div>
+
+          <!-- Columna 2: Enlaces Rápidos -->
+          <div class="col-md-12 col-lg-3 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Enlaces Rápidos</h3>
+              <div class="footer-menu--style">
+                <ul>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="about.html">Nosotros</a></li>
+                  <li><a href="services.html">Servicios</a></li>
+                  <li><a href="products.html">Productos</a></li>
+                  <li><a href="project.html">Proyectos</a></li>
+                  <li><a href="contact.html">Contacto</a></li>
+                </ul>
               </div>
-              <div class="media-body">
-                <span class="footer-info_label">Teléfono:</span>
-                <div class="footer-info_link">
-                  <a href="tel:523141450638">+52 314 145 0638</a>
+            </div>
+          </div>
+
+          <!-- Columna 3: Nuestros Productos -->
+          <div class="col-md-12 col-lg-3 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Nuestros Productos</h3>
+              <div class="footer-menu--style">
+                <ul>
+                  <li><a href="products.html#fc">Concreto F'c</a></li>
+                  <li><a href="products.html#mr">Concreto MR</a></li>
+                  <li><a href="products.html#especiales">Mortero Fluido</a></li>
+                  <li><a href="services.html#bombeado">Servicio de Bombeo</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna 4: Contacto -->
+          <div class="col-md-12 col-lg-3 col-xl-3">
+            <div class="widget footer-widget">
+              <h3 class="widget_title">Contacto</h3>
+              <div class="footer-info--style2">
+                <div class="footer-info_icon">
+                  <i><img src="assets/img/icons/location-info.svg" alt="location info"></i>
+                </div>
+                <div class="media-body">
+                  <div class="footer-info_link">Camino a Aguas Negras S/N, Manzanillo, Colima</div>
+                </div>
+              </div>
+              <div class="footer-info--style2 pt-3">
+                <div class="footer-info_icon">
+                  <i><img src="assets/img/icons/phone-info.svg" alt="phone icon"></i>
+                </div>
+                <div class="media-body">
+                  <span class="footer-info_label">Teléfono:</span>
+                  <div class="footer-info_link">
+                    <a href="tel:523141450638">+52 314 145 0638</a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-info--style2 pt-3">
+                <div class="footer-info_icon">
+                  <i class="fab fa-whatsapp" style="color: #ffffff; font-size: 22px;"></i>
+                </div>
+                <div class="media-body">
+                  <span class="footer-info_label">WhatsApp:</span>
+                  <div class="footer-info_link">
+                    <a href="https://wa.me/523141450638">+52 314 145 0638</a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-info--style2 pt-3">
+                <div class="footer-info_icon">
+                  <i><img src="assets/img/icons/open-mail-info.svg" alt="email icon"></i>
+                </div>
+                <div class="media-body">
+                  <span class="footer-info_label">Email:</span>
+                  <div class="footer-info_link">
+                    <a href="mailto:admonconpre@gmail.com">admonconpre@gmail.com</a>
+                  </div>
                 </div>
               </div>
             </div>
-           <div class="footer-info--style2 pt-3">
-  <div class="footer-info_icon">
-    <i class="fab fa-whatsapp" style="color: #ffffff; font-size: 22px;"></i>
-  </div>
-  <div class="media-body">
-    <span class="footer-info_label">WhatsApp:</span>
-    <div class="footer-info_link">
-      <a href="https://wa.me/523141450638">+52 314 145 0638</a>
-    </div>
-  </div>
-</div>
-            <div class="footer-info--style2 pt-3">
-              <div class="footer-info_icon">
-                <i><img src="assets/img/icons/open-mail-info.svg" alt="email icon"></i>
-              </div>
-              <div class="media-body">
-                <span class="footer-info_label">Email:</span>
-                <div class="footer-info_link">
-                  <a href="mailto:admonconpre@gmail.com">admonconpre@gmail.com</a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-
       </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-layout__bottom">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-lg-12 text-center">
-          <p class="copyright-text">© 2025 Conpre Concretos. Todos los derechos reservados. | Desarrollado por Teseo Data Lab</p>
+      <!-- Footer Bottom -->
+      <div class="footer-layout__bottom">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-12 text-center">
+            <p class="copyright-text">© 2025 Conpre Concretos. Todos los derechos reservados. | Desarrollado por Teseo Data Lab</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-  
+  </footer>
+
   <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
-  
+
   <!--==============================
-        All Js File
-    ============================== -->
-  <!-- Jquery -->
+    All Js File
+  ============================== -->
   <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
-  <!-- Slick Slider -->
   <script src="assets/js/slick.min.js"></script>
-  <!-- Bootstrap -->
   <script src="assets/js/bootstrap.min.js"></script>
-  <!-- WOW.js Animation -->
   <script src="assets/js/wow.min.js"></script>
-  <!-- Magnific Popup -->
   <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <!-- Isotope Filter -->
   <script src="assets/js/imagesloaded.pkgd.min.js"></script>
   <script src="assets/js/isotope.pkgd.min.js"></script>
-  <!-- Select 2 -->
   <script src="assets/js/select2.min.js"></script>
-  <!-- Main Js File -->
   <script src="assets/js/main.js"></script>
-  <script src="kit.fontawesome.com" crossorigin="anonymous"></script>
-  
+
   <script>
-    // Script para la guía de selección
     document.addEventListener('DOMContentLoaded', function() {
-      const tabs = document.querySelectorAll('.guide-tab');
-      const contents = document.querySelectorAll('.guide-content');
-      
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-          const target = this.getAttribute('data-target');
-          
-          // Remover clase activa de todos
-          tabs.forEach(t => t.classList.remove('active'));
-          contents.forEach(c => c.classList.remove('active'));
-          
-          // Agregar clase activa al seleccionado
+
+      // ===== NAVEGACIÓN STICKY - Resaltar activo =====
+      const navLinks = document.querySelectorAll('.products-nav-link');
+      const sections = document.querySelectorAll('.products-category, .products-customize, .products-guide');
+
+      function updateActiveNav() {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 150;
+          if (window.pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNav);
+
+      // ===== FILTROS POR APLICACIÓN =====
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const productCards = document.querySelectorAll('.product-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+
+          // Actualizar botón activo
+          filterBtns.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
-          document.getElementById(target).classList.add('active');
+
+          // Filtrar cards
+          productCards.forEach(card => {
+            const categories = card.getAttribute('data-category');
+
+            if (filter === 'all' || categories.includes(filter)) {
+              card.classList.remove('hidden');
+              card.classList.add('fade-in');
+            } else {
+              card.classList.add('hidden');
+              card.classList.remove('fade-in');
+            }
+          });
         });
       });
-      
-      // Scroll suave para enlaces internos
+
+      // ===== GUÍA DE SELECCIÓN - Tabs =====
+      const guideTabs = document.querySelectorAll('.guide-tab-btn');
+      const guidePanels = document.querySelectorAll('.guide-panel');
+
+      guideTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          const target = this.getAttribute('data-target');
+
+          // Actualizar tab activo
+          guideTabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+
+          // Mostrar panel correspondiente
+          guidePanels.forEach(panel => {
+            panel.classList.remove('active');
+            if (panel.id === target) {
+              panel.classList.add('active');
+            }
+          });
+        });
+      });
+
+      // ===== SCROLL SUAVE =====
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
           const targetId = this.getAttribute('href');
           if (targetId !== '#') {
             e.preventDefault();
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
               window.scrollTo({
-                top: targetElement.offsetTop - 100,
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
               });
             }
           }
         });
       });
-      
-      // Inicializar WOW.js
+
+      // ===== INICIALIZAR WOW.js =====
       new WOW().init();
     });
   </script>

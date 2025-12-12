@@ -1,16 +1,26 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="es">
 
-
-<!-- Mirrored from html.vecurosoft.com/consik/demo/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Nov 2025 04:14:11 GMT -->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Conpre Concretos - Servicios</title>
-  <meta name="author" content="vecuro">
-  <meta name="description" content="TechBiz - IT Solution & Service HTML Template">
-  <meta name="keywords" content="TechBiz - IT Solution & Service HTML Template" />
+  <title>Servicios | Conpre Concretos - Bombeo y Entrega de Concreto</title>
+  <meta name="author" content="Conpre Concretos">
+  <meta name="description" content="Servicios de concreto premezclado: tiro directo, tiro bombeado (28m y 36m), tiro lanzado. Bombas propias, operadores certificados. Renta de vibrador y bombeo independiente.">
+  <meta name="keywords" content="servicios concreto, bombeo concreto, tiro directo, tiro bombeado, shotcrete, vibrador concreto, Manzanillo" />
   <meta name="robots" content="INDEX,FOLLOW">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Servicios | Conpre Concretos">
+  <meta property="og:description" content="Servicios de concreto premezclado: tiro directo, tiro bombeado (28m y 36m), tiro lanzado. Bombas propias y operadores certificados.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:locale" content="es_MX">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Servicios | Conpre Concretos">
+  <meta name="twitter:description" content="Servicios de concreto: tiro directo, bombeado y lanzado. Bombas de 28m y 36m de alcance.">
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://conpreconcretos.com/services.html">
   <!-- Mobile Specific Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Favicons - Place favicon.ico in the root directory -->
@@ -41,7 +51,6 @@
 	    All CSS File
 	============================== -->
   <!-- Bootstrap -->
-  <!-- <link rel="stylesheet" href="assets/css/app.min.css"> -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <!-- Fontawesome Icon -->
   <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -53,14 +62,34 @@
   <link rel="stylesheet" href="assets/css/select2.min.css">
   <!-- Theme Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Conpre Custom CSS -->
+  <link rel="stylesheet" href="assets/css/conpre-custom.css">
   <style>
     .service-block__icon {
-  display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
-  height: 100%;            /* asegúrate de que tome el alto del contenedor */
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
 
+    /* Responsive service-block__hide */
+    .service-block__hide {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .service-block__hide {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+        max-height: 250px;
+      }
+    }
   </style>
   <style>
     /* --- TARJETAS UN POCO MÁS GRANDES --- */
@@ -140,7 +169,7 @@
 	Preloader
 	==============================-->
   <div class="preloader">
-    <button class="vs-btn preloaderCls">Cancel Preloader </button>
+    <button class="vs-btn preloaderCls">Omitir Carga</button>
     <div class="preloader-inner">
       <img src="assets/img/logo-black.png" alt="logo">
       <span class="loader"></span>
@@ -214,13 +243,12 @@ autoconstrucción, desarrollos residenciales y obra pública</p>
   <div class="header-topper position-relative">
     <div class="header-top d-none d-md-block">
       <div class="container">
-        <div class="row align-items-center justify-content-center gy-1 text-center text-lg-start">
-          <div class="col-lg-5 col-auto d-none d-lg-block">
-            <p class="header-text"><span class="header-text__bullet"></span> 10 años de experiencia en concreto premezclado</p>
+        <div class="row align-items-center justify-content-end">
+          <div class="col-auto">
+            <p class="header-text header-info mb-0"><i class="fal fa-map-marker-alt"></i> Camino a Aguas Negras S/N, Manzanillo, Colima</p>
           </div>
-          <div class="col-lg-7 col-auto text-end">
-            <p class="header-text header-info"><i class="fal fa-map-marker-alt"></i> Camino a Aguas Negras S/N, Manzanillo, Colima</p>
-            <p class="header-text header-info"><i class="fal fa-envelope"></i> <a href="mailto:info@conpreconcretos.com">info@conpreconcretos.com</a></p>
+          <div class="col-auto">
+            <p class="header-text header-info mb-0"><i class="fal fa-envelope"></i> <a href="mailto:admonconpre@gmail.com">admonconpre@gmail.com</a></p>
           </div>
         </div>
       </div>
@@ -258,20 +286,11 @@ autoconstrucción, desarrollos residenciales y obra pública</p>
                       </svg>
                     </button>
                   </div>
-                  <div class="col-auto d-none d-md-block">
-                    <div class="header-btns">
-                      <div class="d-none d-lg-inline-block">
-                        <button class="sideMenuToggler"><i>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="16.02" viewBox="0 0 38 16.02">
-                            <path d="M1268,206.78v-2h38v2Zm0-7.01v-2h38v2Zm0-7.01v-2h38v2Z" transform="translate(-1268 -190.76)" fill="currentColor"/>
-                          </svg>
-                        </i></button>
-                      </div>
-                      <a href="contact.html#cotizacion" class="vs-btn d-none d-vc-sm-block">
-                        <span class="vs-btn__bar"></span>
-                        Cotizar Proyecto
-                      </a>
-                    </div>
+                  <div class="col-auto d-none d-lg-block">
+                    <a href="contact.html#cotizacion" class="vs-btn">
+                      <span class="vs-btn__bar"></span>
+                      Cotizar Proyecto
+                    </a>
                   </div>
                 </div>
               </div>
@@ -338,12 +357,7 @@ un servicio profesional y confiable.</p>
                 <a class="service-block__title__link" href="service-details.html">Tiro Directo</a>
               </h3>
               <div class="overflow-hidden">
-                <div class="service-block__hide" style="
-    width: 300px;
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    ">
+                <div class="service-block__hide">
                   <p class="service-block__text">Entrega directa del concreto desde el camión revolcador al punto de vaciado.
 Ideal para proyectos con acceso vehicular directo y sin restricciones de altura.</p>
                   <h6><strong>VENTAJAS:</strong></h3>
@@ -383,12 +397,7 @@ Ideal para proyectos con acceso vehicular directo y sin restricciones de altura.
                 <a class="service-block__title__link" href="service-details.html">Tiro Bombeado</a>
               </h3>
               <div class="overflow-hidden">
-                <div class="service-block__hide" style="
-    width: 300px;
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    ">
+                <div class="service-block__hide">
                   <p class="service-block__text">Entrega mediante bombas de concreto de alta precisión con alcances de 28 y 36
 metros. Solución ideal para proyectos de difícil acceso, edificios de varios
 niveles o áreas donde el camión no puede llegar directamente.</p>
@@ -439,12 +448,7 @@ niveles o áreas donde el camión no puede llegar directamente.</p>
                 <a class="service-block__title__link" href="service-details.html">Tiro Lanzado</a>
               </h3>
               <div class="overflow-hidden">
-                <div class="service-block__hide" style="
-    width: 300px;
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    ">
+                <div class="service-block__hide">
                   <p class="service-block__text">Aplicación especializada de concreto mediante lanzado neumático (shotcrete).
 Ideal para recubrimientos, superficies irregulares y estructuras que requieren
 adherencia superior.</p>
@@ -654,10 +658,10 @@ Documentación entregada (remisión, especificaciones técnicas).
         <div class="col-lg-6">
           <div class="vsfaqs-img">
             <div class="vsfaqs-img__img1">
-              <img src="assets/img/faq/faq-1-1.jpg" alt="faq 1">
+              <img src="assets/img/faq/faq-1-1.jpg" alt="Servicios Conpre" loading="lazy">
             </div>
             <div class="vsfaqs-img__img2">
-              <img src="assets/img/faq/faq-1-2.jpg" alt="faq 1">
+              <img src="assets/img/faq/faq-1-2.jpg" alt="Servicios Conpre" loading="lazy">
             </div>
           </div>
         </div>
@@ -671,11 +675,11 @@ Documentación entregada (remisión, especificaciones técnicas).
   <div class="quote--layout1 z-index-common overflow-hidden" data-bg-src="assets/img/bg/bg-1.jpg">
     <div class="quote__shape position-absolute start-0 top-0 bottom-0 z-index-n1">
       <svg width="929" height="771.999" viewBox="0 0 929 771.999">
-        <path id="Rectangle_523_copy" data-name="Rectangle 523 copy" d="M0,7286H636.73L929,8058,0,8056Z" transform="translate(0 -7286)" fill="#fc6601" />
+        <path id="Rectangle_523_copy" data-name="Rectangle 523 copy" d="M0,7286H636.73L929,8058,0,8056Z" transform="translate(0 -7286)" fill="#00a550" />
       </svg>
     </div>
     <div class="quote__img position-absolute bottom-0">
-      <img src="assets/img/quote/quote-img-1.png" alt="quote-img-1">
+      <img src="assets/img/quote/quote-img-1.png" alt="Cotización Conpre" loading="lazy">
     </div>
     <div class="container">
       <div class="row">
@@ -691,16 +695,16 @@ Documentación entregada (remisión, especificaciones técnicas).
             </div>
             <span class="sec-subtitle"></span>
             <h2 class="sec-title mb-1">¿Necesitas Concreto para tu Proyecto?</h2>
-            <p class="sec-text">ontáctanos para una cotización personalizada y sin compromiso</p>
+            <p class="sec-text">Contáctanos para una cotización personalizada y sin compromiso</p>
             <div class="row gx-20">
               <div class="col-12 form-group">
                 <a style="margin: 2%;" href="contact.html#cotizacion" class="vs-btn" tabindex="0">
                   <span class="vs-btn__bar"></span>
                   Solicitar Cotización
                 </a>
-                <a href="" class="vs-btn" tabindex="0">
+                <a href="tel:+523141450638" class="vs-btn" tabindex="0">
                   <span class="vs-btn__bar"></span>
-                  Llamar Ahora
+                  <i class="fas fa-phone me-2"></i>Llamar Ahora
                 </a>
               </div>
             </div>
@@ -746,7 +750,7 @@ Documentación entregada (remisión, especificaciones técnicas).
                 <li><a href="about.html">Nosotros</a></li>
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="products.html">Productos</a></li>
-                <li><a href="projects.html">Proyectos</a></li>
+                <li><a href="project.html">Proyectos</a></li>
                 <li><a href="contact.html">Contacto</a></li>
               </ul>
             </div>
@@ -854,9 +858,5 @@ Documentación entregada (remisión, especificaciones técnicas).
   <script src="assets/js/select2.min.js"></script>
   <!-- Main Js File -->
   <script src="assets/js/main.js"></script>
-  <script src="kit.fontawesome.com" crossorigin="anonymous"></script>
 </body>
-
-
-<!-- Mirrored from html.vecurosoft.com/consik/demo/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Nov 2025 04:14:11 GMT -->
 </html>
