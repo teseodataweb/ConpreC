@@ -1,0 +1,15 @@
+# robots.txt para Conpre Concretos
+# https://conpreconcretos.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://conpreconcretos.com/sitemap.xml
+
+# Directorios a excluir
+Disallow: /assets/js/vendor/
+Disallow: /*.zip$
+
+# Archivos del servidor
+Disallow: /c.php

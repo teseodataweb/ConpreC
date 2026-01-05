@@ -5,7 +5,12 @@
       "Bash(dir:*)",
       "Bash(du:*)",
       "Bash(ls:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(wc:*)",
+      "Bash(find ./assets/img -maxdepth 1 -type d -exec sh -c 'echo \"\"$\\(basename {}\\) - $\\(find {} -type f | wc -l\\) files\"\"' ;)",
+      "Bash(pip show:*)"
     ],
     "deny": [],
     "ask": []

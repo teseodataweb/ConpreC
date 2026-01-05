@@ -290,3 +290,96 @@
   border: none;
   display: block;
 }
+
+/* ===== FORM ICONS ===== */
+.contact-form-section .form-group {
+  position: relative;
+}
+
+.contact-form-section .form-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Textarea icon - top aligned */
+.contact-form-section .form-group:has(textarea) .form-icon {
+  top: 20px;
+  transform: none;
+}
+
+/* Add padding to inputs for icon space */
+.contact-form-section .form-group input,
+.contact-form-section .form-group select {
+  padding-left: 45px;
+}
+
+.contact-form-section .form-group textarea {
+  padding-left: 45px;
+}
+
+/* Select wrapper positioning */
+.contact-form-section .select-wrapper {
+  position: relative;
+}
+
+.contact-form-section .select-wrapper .form-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.contact-form-section .select-wrapper select {
+  padding-left: 45px;
+}
+
+/* Form text helper */
+.contact-form-section .form-text {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+  padding-left: 45px;
+}
+
+/* Submit button styling */
+.contact-form-section .submit-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.contact-form-section .submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Form note */
+.contact-form-section .form-note {
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  margin-top: 25px;
+  padding: 15px;
+  background: #fff8e1;
+  border-left: 4px solid #ffc107;
+}

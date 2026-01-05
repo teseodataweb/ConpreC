@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Configuración del correo
-    $to = "admonconpre@gmail.com";
+    $to = "contacto@conpreconcretos.com";
     $subject = "Nueva solicitud de cotización";
 
     // Recopilar y limpiar datos del formulario
@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(trim($_POST["phone"]));
     $project_type = htmlspecialchars(trim($_POST["project_type"]));
+    $service_type = isset($_POST["service_type"]) ? htmlspecialchars(trim($_POST["service_type"])) : "No especificado";
     $location = htmlspecialchars(trim($_POST["location"]));
     $volume = isset($_POST["volume"]) ? htmlspecialchars(trim($_POST["volume"])) : "No especificado";
     $message = htmlspecialchars(trim($_POST["message"]));
@@ -31,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <p><strong>Email:</strong> $email</p>
       <p><strong>Teléfono:</strong> $phone</p>
       <p><strong>Tipo de Proyecto:</strong> $project_type</p>
+      <p><strong>Tipo de Servicio:</strong> $service_type</p>
       <p><strong>Ubicación:</strong> $location</p>
       <p><strong>Volumen Estimado:</strong> $volume</p>
       <p><strong>Mensaje:</strong><br>" . nl2br($message) . "</p>
