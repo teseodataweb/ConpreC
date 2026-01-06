@@ -52,6 +52,61 @@
   <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <!-- Schema.org JSON-LD for ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contacto - Conpre Concretos",
+    "description": "Página de contacto para cotizaciones de concreto premezclado en Manzanillo, Colima",
+    "url": "https://conpreconcretos.com/contact.html",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "Conpre Concretos",
+      "image": "https://conpreconcretos.com/assets/img/logo.png",
+      "url": "https://conpreconcretos.com",
+      "telephone": "+52-314-145-0639",
+      "email": "contacto@conpreconcretos.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Camino a Aguas Negras S/N",
+        "addressLocality": "Manzanillo",
+        "addressRegion": "Colima",
+        "postalCode": "28219",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.12646,
+        "longitude": -104.32139
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 19.12646,
+          "longitude": -104.32139
+        },
+        "geoRadius": "30000"
+      }
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -694,10 +749,73 @@
   <script src="assets/js/select2.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
+    // ============================================
+    // PRE-LLENADO DE SERVICIO DESDE URL
+    // ============================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const servicio = urlParams.get('servicio');
+
+      if (servicio) {
+        const serviceSelect = document.getElementById('service_type');
+        if (serviceSelect) {
+          // Mapeo de parámetros URL a valores del select
+          const servicioMap = {
+            'tiro-directo': 'tiro-directo',
+            'tiro-bombeado': 'tiro-bombeado',
+            'tiro-lanzado': 'tiro-lanzado',
+            'renta-vibrador': 'renta-vibrador',
+            'tendido-tuberia': 'tendido-tuberia'
+          };
+
+          if (servicioMap[servicio]) {
+            serviceSelect.value = servicioMap[servicio];
+          }
+        }
+      }
+    });
+
+    // ============================================
+    // GA4 EVENT TRACKING
+    // ============================================
+    // Track WhatsApp clicks
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'click_whatsapp', {
+          'event_category': 'contact',
+          'event_label': 'WhatsApp Click',
+          'value': 1
+        });
+      });
+    });
+
+    // Track Phone clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'click_phone', {
+          'event_category': 'contact',
+          'event_label': 'Phone Click',
+          'value': 1
+        });
+      });
+    });
+
+    // ============================================
+    // FORM SUBMISSION WITH GA4 TRACKING
+    // ============================================
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault(); // Evitar recarga de página
 
       const formData = new FormData(this);
+
+      // Track form submission in GA4
+      gtag('event', 'form_submit', {
+        'event_category': 'lead',
+        'event_label': 'Contact Form Submission',
+        'service_type': formData.get('service_type') || 'not_specified',
+        'project_type': formData.get('project_type') || 'not_specified',
+        'value': 1
+      });
 
       fetch(this.action, {
         method: 'POST',
