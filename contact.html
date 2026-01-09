@@ -69,7 +69,7 @@
       "email": "contacto@conpreconcretos.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Camino a Aguas Negras S/N",
+        "streetAddress": "Camino A Aguas Negras S/N, Esq. Almendra Del Mar, Frac. Marimar II",
         "addressLocality": "Manzanillo",
         "addressRegion": "Colima",
         "postalCode": "28219",
@@ -208,7 +208,7 @@
           <li><a href="services.html">Servicios</a></li>
           <li><a href="products.html">Productos</a></li>
           <li><a href="project.html">Proyectos</a></li>
-          <li><a href="contact.html">Contáctanos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -223,7 +223,7 @@
           <div class="footer-logo">
             <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre" class="logo"></a>
           </div>
-          <p>10 años de experiencia entregando soluciones en concreto para
+          <p><span class="years-experience">11</span> años de experiencia entregando soluciones en concreto para
             autoconstrucción, desarrollos residenciales y obra pública</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/p/Conpre-Concretos-100087959718875/"><i class="fab fa-facebook-f"></i></a>
@@ -249,14 +249,6 @@
     <div class="header-topper position-relative">
       <div class="header-top d-none d-md-block">
         <div class="container">
-          <div class="row align-items-center justify-content-end">
-            <div class="col-auto">
-              <p class="header-text header-info mb-0"><i class="fal fa-map-marker-alt"></i> Camino a Aguas Negras S/N, Manzanillo, Colima</p>
-            </div>
-            <div class="col-auto">
-              <p class="header-text header-info mb-0"><i class="fal fa-envelope"></i> <a href="mailto:contacto@conpreconcretos.com">contacto@conpreconcretos.com</a></p>
-            </div>
-          </div>
         </div>
       </div>
       <div class="sticky-wrapper">
@@ -282,7 +274,7 @@
                           </li>
                           <li><a href="products.html">Productos</a></li>
                           <li><a href="project.html">Proyectos</a></li>
-                          <li><a href="contact.html">Contáctanos</a></li>
+                          <li><a href="contact.html">Contacto</a></li>
                         </ul>
                       </nav>
                       <button class="vs-menu-toggle d-inline-block d-lg-none">
@@ -343,13 +335,13 @@
               <h3 class="contact-info-title">Oficinas</h3>
             </div>
             <div class="contact-info-content">
-              <p>Camino a Aguas Negras S/N</p>
+              <p>Camino A Aguas Negras S/N, Esq. Almendra Del Mar, Frac. Marimar II</p>
               <p>Manzanillo, Colima</p>
             </div>
           </div>
 
-          <!-- Teléfono -->
-          <div class="contact-info-card">
+          <!-- Teléfono (solo visible en móvil) -->
+          <div class="contact-info-card d-md-none">
             <div class="contact-info-header">
               <div class="contact-info-icon">
                 <i class="fas fa-phone"></i>
@@ -596,7 +588,7 @@
             <h2 class="sec-title mb-2">¿Prefieres Llamar Directamente?</h2>
             <p class="sec-text mb-4">Nuestro equipo está disponible para atenderte</p>
             <div class="row align-items-center">
-              <div class="col-auto">
+              <div class="col-auto d-md-none">
                 <a href="tel:+523141450639" class="vs-btn style2" tabindex="0">
                   <span class="vs-btn__bar"></span>
                   <i class="fas fa-phone me-2"></i>Llamar Ahora
@@ -630,7 +622,7 @@
                 <a href="index.html"><img src="assets/img/logo-black.png" alt="Conpre Concretos" class="logo"
                     style="max-width:180px;"></a>
                 <p class="footer-text">
-                  Conpre Concretos es una empresa 100% manzanillense con 10 años de experiencia en la producción y
+                  Conpre Concretos es una empresa 100% manzanillense con <span class="years-experience">11</span> años de experiencia en la producción y
                   entrega de concreto premezclado de calidad certificada.
                 </p>
               </div>
@@ -683,10 +675,10 @@
                   <i><img src="assets/img/icons/location-info.svg" alt="location info"></i>
                 </div>
                 <div class="media-body">
-                  <div class="footer-info_link">Camino a Aguas Negras S/N, Manzanillo, Colima</div>
+                  <div class="footer-info_link">Camino A Aguas Negras S/N, Esq. Almendra Del Mar, Frac. Marimar II, Manzanillo, Colima</div>
                 </div>
               </div>
-              <div class="footer-info--style2 pt-3">
+              <div class="footer-info--style2 pt-3 d-md-none">
                 <div class="footer-info_icon">
                   <i><img src="assets/img/icons/phone-info.svg" alt="phone icon"></i>
                 </div>
@@ -874,6 +866,21 @@
           }
         }
       }
+    })();
+  </script>
+  <!-- Cálculo automático de años de experiencia (Aniversario: 1 de diciembre 2014) -->
+  <script>
+    (function() {
+      var fundacion = new Date(2014, 11, 1);
+      var hoy = new Date();
+      var años = hoy.getFullYear() - fundacion.getFullYear();
+      if (hoy.getMonth() < 11 || (hoy.getMonth() === 11 && hoy.getDate() < 1)) {
+        años--;
+      }
+      var elementos = document.querySelectorAll('.years-experience');
+      elementos.forEach(function(el) {
+        el.textContent = años;
+      });
     })();
   </script>
   <script>document.getElementById('copyright-year').textContent = new Date().getFullYear();</script>
