@@ -10,7 +10,10 @@
       "Bash(git commit:*)",
       "Bash(wc:*)",
       "Bash(find ./assets/img -maxdepth 1 -type d -exec sh -c 'echo \"\"$\\(basename {}\\) - $\\(find {} -type f | wc -l\\) files\"\"' ;)",
-      "Bash(pip show:*)"
+      "Bash(pip show:*)",
+      "Bash(git push)",
+      "Bash(powershell -Command:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
