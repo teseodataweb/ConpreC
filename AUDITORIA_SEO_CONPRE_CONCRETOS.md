@@ -17,24 +17,25 @@
 ╔═══════════════════════════════════════════════════════════════════╗
 ║                    SEO SCORE CARD                                ║
 ║                    Conpre Concretos                              ║
-║                    17 de febrero de 2026                         ║
-║                    ACTUALIZADO post Fases 1-4                    ║
+║                    18 de febrero de 2026                         ║
+║                    ACTUALIZADO post Fases 1-5                    ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║  SCORE GENERAL: 74/100  (anterior: 61/100  △+13)                ║
-║  █████████████████████████████░░░░░░░░░░░ 74%                   ║
-║  Clasificación: BUENO — Optimizado, con margen en Performance   ║
+║  SCORE GENERAL: 77/100  (anterior: 74/100  △+3, inicio: 61)     ║
+║  ██████████████████████████████░░░░░░░░░░ 77%                   ║
+║  Clasificación: BUENO — Performance optimizado con WebP+srcset  ║
 ║                                                                  ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║  BREAKDOWN POR CATEGORÍA              ANTES → AHORA             ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║  Technical SEO (25%)        6.3/10    █████████████░░░░░░░ 63%  ║
-║  ├── Performance            6.3/10    (was 5.0) △+1.3           ║
+║  Technical SEO (25%)        7.3/10    ██████████████░░░░░░ 73%  ║
+║  ├── Performance            8.5/10    (was 6.3) △+2.2           ║
 ║  │   ├── Width/height       9.0/10    (was 2.0) ✓ 95%+ imgs    ║
 ║  │   ├── Lazy loading       8.0/10    (was 5.0) ✓ 80%+ imgs    ║
-║  │   └── WebP/srcset        3.0/10    (unchanged) pendiente     ║
-║  ├── Mobile                 6.5/10    (was 6.0) △+0.5           ║
+║  │   └── WebP/srcset        8.5/10    (was 3.0) ✓ 87 <picture> ║
+║  │       70 WebP, 80 srcset, 46 bg-webp, 78% ahorro            ║
+║  ├── Mobile                 8.0/10    (was 6.5) △+1.5 srcset    ║
 ║  ├── Security               5.5/10    (was 5.0) △+0.5           ║
 ║  └── Architecture           7.0/10    (unchanged)               ║
 ║                                                                  ║
@@ -44,11 +45,11 @@
 ║  ├── Canonicals             8.0/10    (unchanged)               ║
 ║  └── Coverage               7.0/10    (unchanged)               ║
 ║                                                                  ║
-║  On-Page (20%)              8.1/10    ████████████████░░░░ 81%  ║
+║  On-Page (20%)              8.5/10    █████████████████░░░ 85%  ║
 ║  ├── Titles                 8.5/10    (was 7.0) ✓ contact opt   ║
 ║  ├── Descriptions           8.0/10    (was 6.0) ✓ 2 expandidas ║
 ║  ├── Headers                8.5/10    (was 5.0) ✓ H1+jerarquía ║
-║  └── Images                 7.5/10    (was 4.0) ✓ alt+w/h+lazy ║
+║  └── Images                 9.0/10    (was 7.5) ✓ +WebP+srcset ║
 ║                                                                  ║
 ║  Content (15%)              7.1/10    ██████████████░░░░░░ 71%  ║
 ║  ├── Quality                7.5/10    (was 6.0) ✓ FAQs ×2      ║
@@ -70,29 +71,38 @@
 ║                                                                  ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║  FÓRMULA DE CÁLCULO                                             ║
-║  Technical:  6.3 × 0.25 = 1.575                                 ║
+║  Technical:  7.3 × 0.25 = 1.825                                 ║
 ║  Indexation: 8.0 × 0.20 = 1.600                                 ║
-║  On-Page:    8.1 × 0.20 = 1.625                                 ║
+║  On-Page:    8.5 × 0.20 = 1.700                                 ║
 ║  Content:    7.1 × 0.15 = 1.065                                 ║
 ║  Local:      6.1 × 0.10 = 0.610                                 ║
 ║  Schema:     9.0 × 0.10 = 0.900                                 ║
 ║  ─────────────────────────────                                   ║
-║  TOTAL: 7.375 × 10 = 74/100                                     ║
+║  TOTAL: 7.700 × 10 = 77/100                                     ║
 ╠═══════════════════════════════════════════════════════════════════╣
-║  MEJORA: +13 puntos (61 → 74)                                   ║
-║  CATEGORÍAS MÁS MEJORADAS:                                      ║
-║    On-Page:    +2.6 (5.5 → 8.1) — alt, w/h, headers, titles    ║
+║  MEJORA TOTAL: +16 puntos (61 → 77)                             ║
+║  CATEGORÍAS MÁS MEJORADAS (acumulado Fases 1-5):                ║
+║    Technical:  +2.3 (5.0 → 7.3) — w/h, lazy, WebP, srcset      ║
+║    On-Page:    +3.0 (5.5 → 8.5) — alt, w/h, headers, WebP imgs ║
 ║    Schema:     +2.7 (6.3 → 9.0) — 7+ tipos en 6/6 páginas     ║
 ║    Content:    +1.3 (5.8 → 7.1) — FAQs + keyword targeting     ║
 ║                                                                  ║
+║  FASE 5 ESPECÍFICAMENTE: +3 puntos (74 → 77)                    ║
+║    • 70 imágenes → WebP (78% ahorro, 142MB → 31MB)             ║
+║    • 87 <picture> elements con fallback JPG/PNG                  ║
+║    • 80 srcset variants (640w, 1024w) para responsive            ║
+║    • 46 backgrounds con data-bg-src-webp                         ║
+║    • 23 archivos raw no utilizados eliminados                    ║
+║    • Buscador no funcional removido de 6 páginas                ║
+║                                                                  ║
 ║  PARA LLEGAR A 85/100 FALTA:                                    ║
-║    • WebP/srcset (Performance +2.0)                              ║
 ║    • Google Business Profile optimizado (Local +2.0)             ║
 ║    • Citations en 10+ directorios (Local +3.0)                   ║
 ║    • Blog con 5+ artículos pilares (Content +1.5)               ║
+║    • HTTPS + credenciales en .env (Security +1.5)                ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║  BENCHMARK VS INDUSTRIA (B2B Industrial - Small Site <20 pág)    ║
-║  Este sitio: 74/100  |  Promedio industria: 45-55/100            ║
+║  Este sitio: 77/100  |  Promedio industria: 45-55/100            ║
 ║  Posición: Significativamente por encima del promedio            ║
 ║  Potencial con optimizaciones restantes: 85-88/100               ║
 ╚═══════════════════════════════════════════════════════════════════╝
@@ -1165,11 +1175,11 @@ CONTENT
 ✅ Implementar FAQPage schema en ambas FAQs
 □ Planificar 5 artículos pilares (pendiente — requiere blog)
 
-PERFORMANCE (pendiente — Fase 5)
-□ Convertir imágenes a WebP con fallback
-□ Implementar srcset para responsive
-□ Eliminar archivos raw no utilizados
-□ Eliminar buscador no funcional
+PERFORMANCE (✓ completado — Fase 5)
+✅ Convertir imágenes a WebP con fallback (70 imgs, 78% ahorro)
+✅ Implementar srcset para responsive (87 <picture>, 80 srcset)
+✅ Eliminar archivos raw no utilizados (23 archivos eliminados)
+✅ Eliminar buscador no funcional (6 páginas)
 ```
 
 ---
