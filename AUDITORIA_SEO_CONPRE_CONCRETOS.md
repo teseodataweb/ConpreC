@@ -18,67 +18,83 @@
 ║                    SEO SCORE CARD                                ║
 ║                    Conpre Concretos                              ║
 ║                    17 de febrero de 2026                         ║
+║                    ACTUALIZADO post Fases 1-4                    ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║  SCORE GENERAL: 61/100                                           ║
-║  ████████████████████████░░░░░░░░░░░░░░ 61%                     ║
-║  Clasificación: ACEPTABLE — Funcional pero con gaps importantes  ║
+║  SCORE GENERAL: 74/100  (anterior: 61/100  △+13)                ║
+║  █████████████████████████████░░░░░░░░░░░ 74%                   ║
+║  Clasificación: BUENO — Optimizado, con margen en Performance   ║
 ║                                                                  ║
 ╠═══════════════════════════════════════════════════════════════════╣
-║  BREAKDOWN POR CATEGORÍA                                         ║
+║  BREAKDOWN POR CATEGORÍA              ANTES → AHORA             ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║  Technical SEO (25%)        5.8/10    ███████████░░░░░░░░░ 58%   ║
-║  ├── Performance            5.0/10                               ║
-║  ├── Mobile                 6.0/10                               ║
-║  ├── Security               5.0/10                               ║
-║  └── Architecture           7.0/10                               ║
+║  Technical SEO (25%)        6.3/10    █████████████░░░░░░░ 63%  ║
+║  ├── Performance            6.3/10    (was 5.0) △+1.3           ║
+║  │   ├── Width/height       9.0/10    (was 2.0) ✓ 95%+ imgs    ║
+║  │   ├── Lazy loading       8.0/10    (was 5.0) ✓ 80%+ imgs    ║
+║  │   └── WebP/srcset        3.0/10    (unchanged) pendiente     ║
+║  ├── Mobile                 6.5/10    (was 6.0) △+0.5           ║
+║  ├── Security               5.5/10    (was 5.0) △+0.5           ║
+║  └── Architecture           7.0/10    (unchanged)               ║
 ║                                                                  ║
-║  Indexation (20%)           7.5/10    ███████████████░░░░░ 75%   ║
-║  ├── robots.txt             7.0/10                               ║
-║  ├── Sitemap                8.0/10                               ║
-║  ├── Canonicals             8.0/10                               ║
-║  └── Coverage               7.0/10                               ║
+║  Indexation (20%)           8.0/10    ████████████████░░░░ 80%  ║
+║  ├── robots.txt             9.0/10    (was 7.0) ✓ LLM+blocks   ║
+║  ├── Sitemap                8.0/10    (unchanged)               ║
+║  ├── Canonicals             8.0/10    (unchanged)               ║
+║  └── Coverage               7.0/10    (unchanged)               ║
 ║                                                                  ║
-║  On-Page (20%)              5.5/10    ███████████░░░░░░░░░ 55%   ║
-║  ├── Titles                 7.0/10                               ║
-║  ├── Descriptions           6.0/10                               ║
-║  ├── Headers                5.0/10                               ║
-║  └── Images                 4.0/10                               ║
+║  On-Page (20%)              8.1/10    ████████████████░░░░ 81%  ║
+║  ├── Titles                 8.5/10    (was 7.0) ✓ contact opt   ║
+║  ├── Descriptions           8.0/10    (was 6.0) ✓ 2 expandidas ║
+║  ├── Headers                8.5/10    (was 5.0) ✓ H1+jerarquía ║
+║  └── Images                 7.5/10    (was 4.0) ✓ alt+w/h+lazy ║
 ║                                                                  ║
-║  Content (15%)              5.8/10    ███████████░░░░░░░░░ 58%   ║
-║  ├── Quality                6.0/10                               ║
-║  ├── Keywords               5.0/10                               ║
-║  ├── Freshness              7.0/10                               ║
-║  └── E-E-A-T                5.0/10                               ║
+║  Content (15%)              7.1/10    ██████████████░░░░░░ 71%  ║
+║  ├── Quality                7.5/10    (was 6.0) ✓ FAQs ×2      ║
+║  ├── Keywords               7.0/10    (was 5.0) ✓ H1+FAQ kws   ║
+║  ├── Freshness              7.5/10    (was 7.0) △+0.5           ║
+║  └── E-E-A-T                6.5/10    (was 5.0) ✓ Org schema   ║
 ║                                                                  ║
-║  Local SEO (10%)            6.0/10    ████████████░░░░░░░░ 60%   ║
-║  ├── GBP                    5.0/10                               ║
-║  ├── NAP                    9.0/10                               ║
-║  ├── Local Content          7.0/10                               ║
-║  └── Citations              3.0/10                               ║
+║  Local SEO (10%)            6.1/10    ████████████░░░░░░░░ 61%  ║
+║  ├── GBP                    5.0/10    (unchanged) pendiente     ║
+║  ├── NAP                    9.0/10    (unchanged)               ║
+║  ├── Local Content          7.5/10    (was 7.0) △+0.5           ║
+║  └── Citations              3.0/10    (unchanged) pendiente     ║
 ║                                                                  ║
-║  Structured Data (10%)      6.3/10    ████████████░░░░░░░░ 63%   ║
-║  ├── Presence               4.0/10                               ║
-║  ├── Validity               8.0/10                               ║
-║  ├── Rich Results           4.0/10                               ║
-║  └── Data Accuracy          9.0/10                               ║
+║  Structured Data (10%)      9.0/10    ██████████████████░░ 90%  ║
+║  ├── Presence               9.5/10    (was 4.0) ✓ 6/6 páginas  ║
+║  ├── Validity               8.5/10    (was 8.0) △+0.5           ║
+║  ├── Rich Results           9.0/10    (was 4.0) ✓ FAQ+Bread+Prod║
+║  └── Data Accuracy          9.0/10    (unchanged)               ║
 ║                                                                  ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║  FÓRMULA DE CÁLCULO                                             ║
-║  Technical:  5.8 × 0.25 = 1.45                                  ║
-║  Indexation: 7.5 × 0.20 = 1.50                                  ║
-║  On-Page:    5.5 × 0.20 = 1.10                                  ║
-║  Content:    5.8 × 0.15 = 0.87                                  ║
-║  Local:      6.0 × 0.10 = 0.60                                  ║
-║  Schema:     6.3 × 0.10 = 0.63                                  ║
+║  Technical:  6.3 × 0.25 = 1.575                                 ║
+║  Indexation: 8.0 × 0.20 = 1.600                                 ║
+║  On-Page:    8.1 × 0.20 = 1.625                                 ║
+║  Content:    7.1 × 0.15 = 1.065                                 ║
+║  Local:      6.1 × 0.10 = 0.610                                 ║
+║  Schema:     9.0 × 0.10 = 0.900                                 ║
 ║  ─────────────────────────────                                   ║
-║  TOTAL: 6.15 × 10 = 61/100                                      ║
+║  TOTAL: 7.375 × 10 = 74/100                                     ║
+╠═══════════════════════════════════════════════════════════════════╣
+║  MEJORA: +13 puntos (61 → 74)                                   ║
+║  CATEGORÍAS MÁS MEJORADAS:                                      ║
+║    On-Page:    +2.6 (5.5 → 8.1) — alt, w/h, headers, titles    ║
+║    Schema:     +2.7 (6.3 → 9.0) — 7+ tipos en 6/6 páginas     ║
+║    Content:    +1.3 (5.8 → 7.1) — FAQs + keyword targeting     ║
+║                                                                  ║
+║  PARA LLEGAR A 85/100 FALTA:                                    ║
+║    • WebP/srcset (Performance +2.0)                              ║
+║    • Google Business Profile optimizado (Local +2.0)             ║
+║    • Citations en 10+ directorios (Local +3.0)                   ║
+║    • Blog con 5+ artículos pilares (Content +1.5)               ║
 ╠═══════════════════════════════════════════════════════════════════╣
 ║  BENCHMARK VS INDUSTRIA (B2B Industrial - Small Site <20 pág)    ║
-║  Este sitio: 61/100  |  Promedio industria: 45-55/100            ║
-║  Posición: Por encima del promedio en fundamentos                ║
-║  Potencial con optimizaciones: 80-85/100                         ║
+║  Este sitio: 74/100  |  Promedio industria: 45-55/100            ║
+║  Posición: Significativamente por encima del promedio            ║
+║  Potencial con optimizaciones restantes: 85-88/100               ║
 ╚═══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -1041,97 +1057,101 @@
 
 # 5. CHECKLIST DE IMPLEMENTACIÓN
 
-## Fase 1: Quick Wins (Semana 1) — Score estimado: 61 → 70
+## Fase 1: Quick Wins (Semana 1) — COMPLETADA ✅ (61 → 68)
 
 ```
 CRITICAL FIXES
-□ Corregir H1 múltiples
-  □ index.html: slides 2 y 3 de <h1> → <h2>
-  □ about.html: breadcrumb H1 → <span> o <h2>
+✅ Corregir H1 múltiples
+  ✅ index.html: slides 2 y 3 de <h1> → <h2>
+  ✅ about.html: breadcrumb H1 → <h2>
 
-□ Optimizar title de contact.html
-  □ "Conpre Concretos - Contacto" →
+✅ Optimizar title de contact.html
+  ✅ "Conpre Concretos - Contacto" →
     "Cotización de Concreto Premezclado | Contacto Conpre Concretos"
 
-□ Expandir meta descriptions
-  □ products.html: 110 → 155 chars
-  □ contact.html: 105 → 158 chars
+✅ Expandir meta descriptions
+  ✅ products.html: 110 → 155 chars
+  ✅ contact.html: 105 → 158 chars
 
-□ Cambiar lang attribute
-  □ 6 páginas: lang="es" → lang="es-MX"
+✅ Cambiar lang attribute
+  ✅ 6 páginas: lang="es" → lang="es-MX"
 
-□ Mejorar robots.txt
-  □ Agregar directivas GPTBot, anthropic-ai, PerplexityBot
-  □ Agregar Disallow: /phpmailer/
-  □ Agregar Disallow: /test_mail.php
-  □ Agregar Disallow: /tmpclaude-*
-  □ Agregar Crawl-delay: 1
+✅ Mejorar robots.txt
+  ✅ Agregar directivas GPTBot, anthropic-ai, PerplexityBot, ClaudeBot
+  ✅ Agregar Disallow: /phpmailer/
+  ✅ Agregar Disallow: /test_mail.php
+  ✅ Agregar Disallow: /tmpclaude-*
+  ✅ Agregar Crawl-delay: 1
 
-□ Seguridad
+□ Seguridad (pendiente — tarea del servidor)
   □ Eliminar test_mail.php del servidor
   □ Eliminar archivos tmpclaude-* del directorio raíz
 ```
 
-## Fase 2: On-Page Optimization (Semana 2-3) — Score estimado: 70 → 75
+## Fase 2: On-Page Optimization (Semana 2-3) — COMPLETADA ✅ (68 → 72)
 
 ```
 IMAGE OPTIMIZATION
-□ Reemplazar alt text genérico en 27 imágenes
-  □ alt="icon" → alt="" role="presentation" (iconos decorativos)
-  □ alt="about" → alt descriptivo de cada imagen
-  □ alt="logo" → alt="Logo Conpre Concretos"
-  □ alt="faq 1" → alt descriptivo del proceso
+✅ Reemplazar alt text genérico en 27+ imágenes
+  ✅ alt="icon" → alt="" role="presentation" (iconos decorativos)
+  ✅ alt="about" → alt descriptivo de cada imagen
+  ✅ alt="logo" → alt="Logo Conpre Concretos"
+  ✅ alt="faq 1" → alt descriptivo del proceso
+  ✅ Total: 40+ alt texts corregidos en 6 archivos
 
-□ Agregar width/height a todas las imágenes
-  □ Medir dimensiones reales de cada imagen
-  □ Agregar atributos width="" height="" en HTML
+✅ Agregar width/height a todas las imágenes
+  ✅ Dimensiones medidas con PowerShell System.Drawing
+  ✅ 88 imágenes no-SVG con width/height (24 SVGs omitidos)
 
-□ Expandir lazy loading
-  □ Agregar loading="lazy" a imágenes below-the-fold faltantes
+✅ Expandir lazy loading
+  ✅ 75 imágenes con loading="lazy" (below-the-fold)
 
 HEADERS
-□ Corregir saltos de jerarquía
-  □ services.html: H2 → H5 → corregir a H2 → H3
-  □ project.html: H2 → H4 → corregir a H2 → H3
+✅ Corregir saltos de jerarquía
+  ✅ services.html: H5→H3 (Ventajas/Aplicaciones), H6→H4 (Equipos)
+  ✅ project.html: H4→H3, H5→H3
 
-□ Mejorar H1 de contact.html
-  □ "Contáctanos" → "Cotización de Concreto Premezclado en Manzanillo"
+✅ Mejorar H1 de contact.html
+  ✅ "Contáctanos" → "Cotización de Concreto Premezclado en Manzanillo"
+
+✅ Optimizar H1 de services.html
+  ✅ "Nuestros Servicios" → "Servicios de Concreto Premezclado en Manzanillo"
 ```
 
-## Fase 3: Structured Data (Semana 3-4) — Score estimado: 75 → 80
+## Fase 3: Structured Data (Semana 3-4) — COMPLETADA ✅ (72 → 74)
 
 ```
 SCHEMAS
-□ BreadcrumbList en 5 páginas internas
-  □ about.html: Home > Nosotros
-  □ services.html: Home > Servicios
-  □ products.html: Home > Productos
-  □ project.html: Home > Proyectos
-  □ contact.html: Home > Contacto
+✅ BreadcrumbList en 5 páginas internas
+  ✅ about.html: Home > Nosotros
+  ✅ services.html: Home > Servicios
+  ✅ products.html: Home > Productos
+  ✅ project.html: Home > Proyectos
+  ✅ contact.html: Home > Contacto
 
-□ Service schema en services.html
-  □ Tiro Directo
-  □ Tiro Bombeado
-  □ Concreto para Tiro Lanzado
-  □ Renta de Vibrador
-  □ Tendido de Tubería
+✅ Service schema en services.html (5 servicios)
+  ✅ Tiro Directo
+  ✅ Tiro Bombeado
+  ✅ Concreto para Tiro Lanzado
+  ✅ Renta de Vibrador
+  ✅ Tendido de Tubería
 
-□ Product schema en products.html
-  □ 8 productos F'c (100-500)
-  □ 6 productos MR (35-48)
-  □ 1 Mortero Fluido
+✅ Product schema en products.html (15 productos)
+  ✅ 8 productos F'c (100-500)
+  ✅ 6 productos MR (35-48)
+  ✅ 1 Mortero Fluido
 
-□ Organization en about.html
+✅ Organization en about.html
 
 VALIDACIÓN
-□ Rich Results Test: todas las páginas con schema
-□ Schema.org Validator: 0 errores
+□ Rich Results Test: pendiente validación manual
+□ Schema.org Validator: pendiente validación manual
 ```
 
-## Fase 4: Local SEO & Content (Mes 2-3) — Score estimado: 80 → 85
+## Fase 4: Local SEO & Content (Mes 2-3) — PARCIAL (74 → objetivo 85)
 
 ```
-LOCAL SEO
+LOCAL SEO (pendiente — tareas externas del cliente)
 □ Verificar Google Business Profile
 □ Crear perfil en Sección Amarilla
 □ Crear página LinkedIn de empresa
@@ -1140,12 +1160,12 @@ LOCAL SEO
 □ Buscar directorios de construcción (CMIC)
 
 CONTENT
-□ Crear sección FAQ en products.html
-□ Crear sección FAQ en services.html
-□ Planificar 5 artículos pilares
-□ Implementar FAQPage schema en FAQs creadas
+✅ Crear sección FAQ en products.html (6 preguntas)
+✅ Crear sección FAQ en services.html (6 preguntas)
+✅ Implementar FAQPage schema en ambas FAQs
+□ Planificar 5 artículos pilares (pendiente — requiere blog)
 
-PERFORMANCE
+PERFORMANCE (pendiente — Fase 5)
 □ Convertir imágenes a WebP con fallback
 □ Implementar srcset para responsive
 □ Eliminar archivos raw no utilizados
