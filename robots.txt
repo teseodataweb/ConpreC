@@ -1,15 +1,33 @@
 # robots.txt para Conpre Concretos
 # https://conpreconcretos.com
+# Última actualización: Febrero 2026
 
 User-agent: *
+Allow: /
+
+# Directorios y archivos a excluir
+Disallow: /assets/js/vendor/
+Disallow: /phpmailer/
+Disallow: /c.php
+Disallow: /test_mail.php
+Disallow: /*.zip$
+Disallow: /tmpclaude-*
+
+# LLM Crawlers — permitir indexación en buscadores AI
+User-agent: GPTBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 # Sitemap
 Sitemap: https://conpreconcretos.com/sitemap.xml
 
-# Directorios a excluir
-Disallow: /assets/js/vendor/
-Disallow: /*.zip$
-
-# Archivos del servidor
-Disallow: /c.php
+# Crawl-delay
+Crawl-delay: 1
