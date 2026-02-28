@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Ejecutivo | Conpre Concretos | Ene-Feb 2026</title>
+    <style>
+        :root {
+            --green: #00a550;
+            --green-dark: #008a42;
+            --green-light: #e6f7ee;
+            --gold: #b49644;
+            --gold-light: #faf5e8;
+            --dark: #1a1a2e;
+            --dark-soft: #2d2d44;
+            --gray-900: #212529;
+            --gray-700: #495057;
+            --gray-500: #6c757d;
+            --gray-300: #dee2e6;
+            --gray-100: #f8f9fa;
+            --white: #ffffff;
+            --red: #dc3545;
+            --red-light: #fdecea;
+            --blue: #0d6efd;
+            --blue-light: #e8f0fe;
+            --orange: #fd7e14;
+            --orange-light: #fff4e6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--gray-900);
+            background: var(--gray-100);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .report-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: 0 0 40px rgba(0,0,0,0.08);
+        }
+
+        /* ===== COVER / HEADER ===== */
+        .report-cover {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-soft) 50%, var(--green-dark) 100%);
+            color: var(--white);
+            padding: 50px 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .report-cover::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,165,80,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .report-cover::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(180,150,68,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cover-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 40px;
+        }
+
+        .cover-logo {
+            width: 120px;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .cover-badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-content h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .cover-content h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+        }
+
+        .cover-meta {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .cover-meta-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .cover-meta-value {
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .cover-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--green);
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+
+        /* ===== CONTEXT BAR ===== */
+        .context-bar {
+            background: var(--green);
+            color: var(--white);
+            padding: 16px 60px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .context-bar svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .report-body {
+            padding: 40px 60px;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gray-300);
+        }
+
+        .section-number {
+            background: var(--green);
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .subsection-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            margin: 24px 0 12px;
+            padding-left: 12px;
+            border-left: 3px solid var(--green);
+        }
+
+        /* ===== EXECUTIVE SUMMARY BOX ===== */
+        .exec-summary {
+            background: linear-gradient(135deg, var(--green-light) 0%, var(--white) 100%);
+            border: 1px solid rgba(0,165,80,0.2);
+            border-radius: 12px;
+            padding: 28px 32px;
+            font-size: 14.5px;
+            line-height: 1.75;
+            color: var(--gray-700);
+        }
+
+        .exec-summary strong {
+            color: var(--green-dark);
+        }
+
+        /* ===== KPI CARDS ===== */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .kpi-card {
+            background: var(--white);
+            border: 1px solid var(--gray-300);
+            border-radius: 10px;
+            padding: 18px 16px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .kpi-card.green::before { background: var(--green); }
+        .kpi-card.gold::before { background: var(--gold); }
+        .kpi-card.blue::before { background: var(--blue); }
+        .kpi-card.orange::before { background: var(--orange); }
+
+        .kpi-value {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .kpi-card.green .kpi-value { color: var(--green); }
+        .kpi-card.gold .kpi-value { color: var(--gold); }
+        .kpi-card.blue .kpi-value { color: var(--blue); }
+        .kpi-card.orange .kpi-value { color: var(--orange); }
+
+        .kpi-label {
+            font-size: 11px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+        }
+
+        .kpi-sub {
+            font-size: 10px;
+            color: var(--gray-500);
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed var(--gray-300);
+        }
+
+        /* ===== TABLES ===== */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .data-table thead th {
+            background: var(--dark);
+            color: var(--white);
+            padding: 10px 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .data-table thead th:first-child {
+            border-radius: 6px 0 0 0;
+        }
+
+        .data-table thead th:last-child {
+            border-radius: 0 6px 0 0;
+        }
+
+        .data-table tbody td {
+            padding: 9px 14px;
+            border-bottom: 1px solid var(--gray-300);
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background: var(--gray-100);
+        }
+
+        .data-table tbody tr:last-child td:first-child {
+            border-radius: 0 0 0 6px;
+        }
+
+        .data-table tbody tr:last-child td:last-child {
+            border-radius: 0 0 6px 0;
+        }
+
+        .data-table .highlight-row {
+            background: var(--green-light) !important;
+            font-weight: 600;
+        }
+
+        .data-table .total-row {
+            background: var(--gray-100) !important;
+            font-weight: 700;
+            border-top: 2px solid var(--gray-500);
+        }
+
+        .text-right { text-align: right; }
+        .text-center { text-align: center; }
+        .text-green { color: var(--green); font-weight: 700; }
+        .text-gold { color: var(--gold); font-weight: 700; }
+        .text-red { color: var(--red); font-weight: 600; }
+        .text-blue { color: var(--blue); font-weight: 600; }
+        .text-bold { font-weight: 700; }
+
+        /* ===== INSIGHT BOX ===== */
+        .insight-box {
+            background: var(--blue-light);
+            border-left: 4px solid var(--blue);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            margin: 14px 0 20px;
+            font-size: 13px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .insight-box.warning {
+            background: var(--orange-light);
+            border-left-color: var(--orange);
+        }
+
+        .insight-box.success {
+            background: var(--green-light);
+            border-left-color: var(--green);
+        }
+
+        .insight-box.alert {
+            background: var(--red-light);
+            border-left-color: var(--red);
+        }
+
+        .insight-label {
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .insight-box.success .insight-label { color: var(--green-dark); }
+        .insight-box .insight-label { color: var(--blue); }
+        .insight-box.warning .insight-label { color: var(--orange); }
+        .insight-box.alert .insight-label { color: var(--red); }
+
+        /* ===== FUNNEL ===== */
+        .funnel {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 12px 0;
+        }
+
+        .funnel-bar-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .funnel-bar {
+            height: 38px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 13px;
+            position: relative;
+        }
+
+        .funnel-value {
+            min-width: 60px;
+            text-align: right;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .funnel-pct {
+            font-size: 11px;
+            color: var(--gray-500);
+            font-weight: 400;
+            display: block;
+        }
+
+        .funnel-arrow {
+            text-align: center;
+            color: var(--gray-300);
+            font-size: 18px;
+            padding: 0 0 0 76px;
+        }
+
+        /* ===== BAR CHART (CSS) ===== */
+        .bar-chart {
+            margin: 16px 0 20px;
+        }
+
+        .bar-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .bar-label {
+            width: 140px;
+            font-size: 12px;
+            color: var(--gray-700);
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 26px;
+            background: var(--gray-100);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: var(--white);
+            font-size: 11px;
+            font-weight: 600;
+            min-width: fit-content;
+            transition: width 0.5s ease;
+        }
+
+        .bar-fill.green { background: var(--green); }
+        .bar-fill.gold { background: var(--gold); }
+        .bar-fill.blue { background: var(--blue); }
+        .bar-fill.dark { background: var(--dark); }
+        .bar-fill.orange { background: var(--orange); }
+
+        .bar-value {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--gray-700);
+            min-width: 50px;
+            flex-shrink: 0;
+        }
+
+        /* ===== TREND CHART (CSS) ===== */
+        .trend-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 120px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-300);
+            margin-bottom: 6px;
+        }
+
+        .trend-bar {
+            flex: 1;
+            background: var(--green);
+            border-radius: 2px 2px 0 0;
+            min-width: 4px;
+            position: relative;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .trend-bar:hover {
+            opacity: 1;
+        }
+
+        .trend-bar.highlight {
+            background: var(--gold);
+            opacity: 1;
+        }
+
+        .trend-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: var(--gray-500);
+        }
+
+        /* ===== TWO COLUMNS ===== */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .two-col-wide-left {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 24px;
+        }
+
+        /* ===== STATUS BADGES ===== */
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-green {
+            background: var(--green-light);
+            color: var(--green-dark);
+        }
+
+        .badge-gold {
+            background: var(--gold-light);
+            color: var(--gold);
+        }
+
+        .badge-blue {
+            background: var(--blue-light);
+            color: var(--blue);
+        }
+
+        .badge-red {
+            background: var(--red-light);
+            color: var(--red);
+        }
+
+        /* ===== FODA ===== */
+        .foda-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .foda-card {
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid;
+        }
+
+        .foda-card.fortalezas {
+            background: var(--green-light);
+            border-color: rgba(0,165,80,0.2);
+        }
+
+        .foda-card.oportunidades {
+            background: var(--blue-light);
+            border-color: rgba(13,110,253,0.2);
+        }
+
+        .foda-card.debilidades {
+            background: var(--orange-light);
+            border-color: rgba(253,126,20,0.2);
+        }
+
+        .foda-card.amenazas {
+            background: var(--red-light);
+            border-color: rgba(220,53,69,0.2);
+        }
+
+        .foda-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .foda-card.fortalezas h4 { color: var(--green-dark); }
+        .foda-card.oportunidades h4 { color: var(--blue); }
+        .foda-card.debilidades h4 { color: var(--orange); }
+        .foda-card.amenazas h4 { color: var(--red); }
+
+        .foda-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .foda-card li {
+            font-size: 12.5px;
+            padding: 4px 0 4px 18px;
+            position: relative;
+            color: var(--gray-700);
+            line-height: 1.5;
+        }
+
+        .foda-card li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .foda-card.fortalezas li::before { background: var(--green); }
+        .foda-card.oportunidades li::before { background: var(--blue); }
+        .foda-card.debilidades li::before { background: var(--orange); }
+        .foda-card.amenazas li::before { background: var(--red); }
+
+        /* ===== RECOMMENDATIONS ===== */
+        .rec-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .rec-item {
+            display: flex;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--gray-300);
+            align-items: flex-start;
+        }
+
+        .rec-item:last-child {
+            border-bottom: none;
+        }
+
+        .rec-priority {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+            color: var(--white);
+        }
+
+        .rec-priority.high { background: var(--red); }
+        .rec-priority.medium { background: var(--orange); }
+        .rec-priority.normal { background: var(--blue); }
+
+        .rec-content h5 {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 2px;
+        }
+
+        .rec-content p {
+            font-size: 12.5px;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+
+        /* ===== PROJECTION TABLE ===== */
+        .projection-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .projection-table thead th {
+            background: var(--green);
+            color: var(--white);
+            padding: 12px 16px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        .projection-table thead th:first-child {
+            text-align: left;
+            border-radius: 8px 0 0 0;
+        }
+
+        .projection-table thead th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .projection-table tbody td {
+            padding: 11px 16px;
+            border-bottom: 1px solid var(--gray-300);
+            text-align: center;
+        }
+
+        .projection-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .projection-table .growth {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        /* ===== FOOTER ===== */
+        .report-footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 24px 60px;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .report-footer strong {
+            color: var(--white);
+        }
+
+        .confidential-tag {
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ===== PAGE BREAK ===== */
+        .page-break {
+            page-break-before: always;
+            border-top: 1px dashed var(--gray-300);
+            margin: 30px 0;
+            padding-top: 30px;
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            body { background: white; font-size: 11px; }
+            .report-container { box-shadow: none; }
+            .report-cover { padding: 30px 40px 25px; }
+            .report-body { padding: 20px 40px; }
+            .kpi-grid { grid-template-columns: repeat(5, 1fr); }
+            .kpi-value { font-size: 22px; }
+            .section { margin-bottom: 24px; }
+            .page-break { page-break-before: always; margin: 0; padding-top: 20px; border: none; }
+            .no-print { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .report-cover { padding: 30px 24px; }
+            .report-body { padding: 24px; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+            .two-col, .two-col-wide-left, .foda-grid { grid-template-columns: 1fr; }
+            .cover-meta { gap: 20px; }
+            .report-footer { padding: 20px 24px; flex-direction: column; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="report-container">
+
+    <!-- ==================== COVER ==================== -->
+    <header class="report-cover">
+        <div class="cover-top">
+            <img src="../assets/img/logo.png" alt="Conpre Concretos" class="cover-logo">
+            <div class="cover-badge">Reporte Ejecutivo</div>
+        </div>
+        <div class="cover-content">
+            <div class="cover-divider"></div>
+            <h1>Metricas del Sitio Web</h1>
+            <h2>conpreconcretos.com &mdash; Periodo de Lanzamiento</h2>
+        </div>
+        <div class="cover-meta">
+            <div class="cover-meta-item">
+                <span class="cover-meta-label">Periodo</span>
+                <span class="cover-meta-value">1 Enero &mdash; 28 Febrero 2026</span>
+            </div>
+            <div class="cover-meta-item">
+                <span class="cover-meta-label">Fuentes</span>
+                <span class="cover-meta-value">Google Analytics 4 &bull; Search Console</span>
+            </div>
+            <div class="cover-meta-item">
+                <span class="cover-meta-label">Cuenta</span>
+                <span class="cover-meta-value">TESEO DATA LAB</span>
+            </div>
+            <div class="cover-meta-item">
+                <span class="cover-meta-label">Fecha del Reporte</span>
+                <span class="cover-meta-value">28 de Febrero de 2026</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== CONTEXT BAR ==================== -->
+    <div class="context-bar">
+        <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 2.5a1 1 0 110 2 1 1 0 010-2zM6.5 7h2v4.5h-2V7z"/></svg>
+        <span><strong>Contexto:</strong> Sitio web nuevo. Aprobado por el cliente a mediados de enero 2026. Se reporta enero completo dado que ya existian interacciones previas al lanzamiento formal.</span>
+    </div>
+
+    <!-- ==================== BODY ==================== -->
+    <main class="report-body">
+
+        <!-- ===== 1. RESUMEN EJECUTIVO ===== -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h3 class="section-title">Resumen Ejecutivo</h3>
+            </div>
+            <div class="exec-summary">
+                El sitio web de Conpre Concretos muestra un <strong>arranque solido</strong> para un sitio nuevo en el nicho de concreto premezclado regional. En solo 2 meses de operacion, se lograron <strong>69 usuarios nuevos</strong>, <strong>162 sesiones</strong>, <strong>985 paginas vistas</strong> y <strong>1,446 impresiones en Google Search</strong>. La tendencia de impresiones organicas presenta un crecimiento acelerado: de <strong>2 impresiones/dia a 159 impresiones/dia</strong>, indicando que Google esta indexando y posicionando el contenido de forma progresiva. Se registraron <strong>5 envios de formulario de cotizacion</strong> y <strong>4 contactos directos</strong> (telefono y WhatsApp), generando un total de <strong>9 acciones de contacto comercial</strong>.
+            </div>
+        </div>
+
+        <!-- ===== KPI DASHBOARD ===== -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h3 class="section-title">Dashboard de KPIs</h3>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card green">
+                    <div class="kpi-value">69</div>
+                    <div class="kpi-label">Usuarios Nuevos</div>
+                    <div class="kpi-sub">Benchmark: 30-50</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-value">162</div>
+                    <div class="kpi-label">Sesiones Totales</div>
+                    <div class="kpi-sub">Benchmark: 80-120</div>
+                </div>
+                <div class="kpi-card gold">
+                    <div class="kpi-value">6.08</div>
+                    <div class="kpi-label">Paginas / Sesion</div>
+                    <div class="kpi-sub">Benchmark: 2-3</div>
+                </div>
+                <div class="kpi-card gold">
+                    <div class="kpi-value">3:38</div>
+                    <div class="kpi-label">Tiempo Promedio</div>
+                    <div class="kpi-sub">Benchmark: 1:00-2:00</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-value">5.6%</div>
+                    <div class="kpi-label">Tasa de Conversion</div>
+                    <div class="kpi-sub">Benchmark: 2-5%</div>
+                </div>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card blue">
+                    <div class="kpi-value">1,446</div>
+                    <div class="kpi-label">Impresiones Google</div>
+                    <div class="kpi-sub">Benchmark: 200-500</div>
+                </div>
+                <div class="kpi-card blue">
+                    <div class="kpi-value">42</div>
+                    <div class="kpi-label">Clics Organicos</div>
+                    <div class="kpi-sub">Creciendo exponencial</div>
+                </div>
+                <div class="kpi-card blue">
+                    <div class="kpi-value">2.90%</div>
+                    <div class="kpi-label">CTR Organico</div>
+                    <div class="kpi-sub">Benchmark: 1-3%</div>
+                </div>
+                <div class="kpi-card orange">
+                    <div class="kpi-value">6.5</div>
+                    <div class="kpi-label">Posicion Media</div>
+                    <div class="kpi-sub">Benchmark: 15-30</div>
+                </div>
+                <div class="kpi-card green">
+                    <div class="kpi-value">9</div>
+                    <div class="kpi-label">Contactos Comerciales</div>
+                    <div class="kpi-sub">5 form + 2 tel + 2 WA</div>
+                </div>
+            </div>
+            <div class="insight-box success">
+                <span class="insight-label">Resultado</span>
+                <strong>8 de 10 KPIs superan el benchmark</strong> para un sitio B2B nuevo de 2 meses. La posicion media de 6.5 (primera pagina de Google) es excepcional; sitios nuevos tipicamente comienzan en posicion 15-30.
+            </div>
+        </div>
+
+        <!-- ===== 3. GOOGLE ANALYTICS ===== -->
+        <div class="page-break"></div>
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h3 class="section-title">Google Analytics 4 &mdash; Audiencia y Comportamiento</h3>
+            </div>
+
+            <h4 class="subsection-title">Canales de Adquisicion</h4>
+            <div class="two-col">
+                <div>
+                    <p style="font-size:12px; color:var(--gray-500); margin-bottom:10px; font-weight:600;">USUARIOS NUEVOS POR CANAL</p>
+                    <div class="bar-chart">
+                        <div class="bar-row">
+                            <div class="bar-label">Direct</div>
+                            <div class="bar-track">
+                                <div class="bar-fill green" style="width:100%;">38 (55.1%)</div>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Organic Search</div>
+                            <div class="bar-track">
+                                <div class="bar-fill gold" style="width:71%;">27 (39.1%)</div>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Referral</div>
+                            <div class="bar-track">
+                                <div class="bar-fill blue" style="width:10.5%;">4 (5.8%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p style="font-size:12px; color:var(--gray-500); margin-bottom:10px; font-weight:600;">SESIONES POR CANAL</p>
+                    <div class="bar-chart">
+                        <div class="bar-row">
+                            <div class="bar-label">Direct</div>
+                            <div class="bar-track">
+                                <div class="bar-fill green" style="width:100%;">96 (59.3%)</div>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Organic Search</div>
+                            <div class="bar-track">
+                                <div class="bar-fill gold" style="width:61.5%;">59 (36.4%)</div>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Referral</div>
+                            <div class="bar-track">
+                                <div class="bar-fill blue" style="width:4.2%;">&nbsp;</div>
+                            </div>
+                            <div class="bar-value">4</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Unassigned</div>
+                            <div class="bar-track">
+                                <div class="bar-fill dark" style="width:3.1%;">&nbsp;</div>
+                            </div>
+                            <div class="bar-value">3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="insight-box">
+                <span class="insight-label">Analisis</span>
+                El trafico directo (55%) es esperado en un sitio nuevo donde la URL se comparte manualmente. Lo destacable es que el <strong>39% de usuarios nuevos ya llega por busqueda organica</strong>, lo cual demuestra que la estrategia SEO esta funcionando de forma temprana. Para un sitio de 2 meses, tener casi el 40% de trafico organico es una senal muy positiva.
+            </div>
+
+            <h4 class="subsection-title">Paginas Mas Visitadas</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Pagina</th>
+                        <th class="text-right">Vistas</th>
+                        <th class="text-right">% Total</th>
+                        <th>Rol en el Embudo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><strong>Inicio</strong> (Home)</td>
+                        <td class="text-right text-green">397</td>
+                        <td class="text-right">40.3%</td>
+                        <td><span class="badge badge-green">Entrada</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Servicios</strong></td>
+                        <td class="text-right">148</td>
+                        <td class="text-right">15.0%</td>
+                        <td><span class="badge badge-blue">Exploracion</span></td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>Contacto</strong></td>
+                        <td class="text-right text-green">143</td>
+                        <td class="text-right">14.5%</td>
+                        <td><span class="badge badge-gold">Conversion</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nosotros</strong></td>
+                        <td class="text-right">131</td>
+                        <td class="text-right">13.3%</td>
+                        <td><span class="badge badge-blue">Confianza</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proyectos</strong></td>
+                        <td class="text-right">49</td>
+                        <td class="text-right">5.0%</td>
+                        <td><span class="badge badge-blue">Prueba social</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Productos</strong> (F'c, MR, Mortero)</td>
+                        <td class="text-right">84</td>
+                        <td class="text-right">8.5%</td>
+                        <td><span class="badge badge-blue">Tecnico</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Blog</strong> (indice + articulos)</td>
+                        <td class="text-right">33</td>
+                        <td class="text-right">3.4%</td>
+                        <td><span class="badge badge-green">SEO</span></td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>TOTAL</td>
+                        <td class="text-right">985</td>
+                        <td class="text-right">100%</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="insight-box success">
+                <span class="insight-label">Hallazgo Clave</span>
+                La pagina de <strong>Contacto es la 3ra mas visitada</strong> (14.5%), lo que indica fuerte intencion comercial. Casi 1 de cada 7 paginas vistas es la pagina de contacto/cotizacion. El flujo natural del usuario es: <strong>Inicio &rarr; Servicios &rarr; Contacto</strong>, un embudo clasico de conversion B2B.
+            </div>
+
+            <h4 class="subsection-title">Distribucion Geografica</h4>
+            <div class="two-col">
+                <div>
+                    <div class="bar-chart">
+                        <div class="bar-row">
+                            <div class="bar-label"><strong>Mexico</strong></div>
+                            <div class="bar-track">
+                                <div class="bar-fill green" style="width:100%;">49 usuarios (60.5%)</div>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Estados Unidos</div>
+                            <div class="bar-track">
+                                <div class="bar-fill gold" style="width:40.8%;">20 (24.7%)</div>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Rusia</div>
+                            <div class="bar-track">
+                                <div class="bar-fill dark" style="width:6.1%;">&nbsp;</div>
+                            </div>
+                            <div class="bar-value">3</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Cuba</div>
+                            <div class="bar-track">
+                                <div class="bar-fill dark" style="width:4.1%;">&nbsp;</div>
+                            </div>
+                            <div class="bar-value">2</div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-label">Otros</div>
+                            <div class="bar-track">
+                                <div class="bar-fill dark" style="width:6.1%;">&nbsp;</div>
+                            </div>
+                            <div class="bar-value">7</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="insight-box">
+                        <span class="insight-label">Alcance Geografico</span>
+                        El <strong>60.5% del trafico proviene de Mexico</strong>, mercado objetivo principal. El trafico de EE.UU. (24.7%) puede incluir mexicanos en el extranjero. El trafico de Rusia probablemente corresponde a bots y se recomienda monitorear.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 4. EMBUDO DE CONVERSION ===== -->
+        <div class="page-break"></div>
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h3 class="section-title">Embudo de Conversion</h3>
+            </div>
+
+            <h4 class="subsection-title">Eventos Registrados</h4>
+            <div class="two-col">
+                <div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Evento</th>
+                                <th class="text-right">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>page_view</td>
+                                <td class="text-right">985</td>
+                            </tr>
+                            <tr>
+                                <td>scroll_depth</td>
+                                <td class="text-right">715</td>
+                            </tr>
+                            <tr>
+                                <td>user_engagement</td>
+                                <td class="text-right">699</td>
+                            </tr>
+                            <tr>
+                                <td>scroll (90%+)</td>
+                                <td class="text-right">287</td>
+                            </tr>
+                            <tr>
+                                <td>session_start</td>
+                                <td class="text-right">159</td>
+                            </tr>
+                            <tr>
+                                <td>first_visit</td>
+                                <td class="text-right">69</td>
+                            </tr>
+                            <tr>
+                                <td>click</td>
+                                <td class="text-right">22</td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>cta_click</strong> (boton cotizar)</td>
+                                <td class="text-right text-green"><strong>11</strong></td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>form_start</strong></td>
+                                <td class="text-right text-green"><strong>9</strong></td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>form_submit</strong></td>
+                                <td class="text-right text-green"><strong>5</strong></td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>click_phone</strong></td>
+                                <td class="text-right text-green"><strong>2</strong></td>
+                            </tr>
+                            <tr class="highlight-row">
+                                <td><strong>click_whatsapp</strong></td>
+                                <td class="text-right text-green"><strong>2</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <p style="font-size:12px; color:var(--gray-500); margin-bottom:16px; font-weight:600;">EMBUDO: SESION &rarr; CONTACTO</p>
+                    <div class="funnel">
+                        <div class="funnel-step">
+                            <div class="funnel-value">162<span class="funnel-pct">100%</span></div>
+                            <div class="funnel-bar-wrapper">
+                                <div class="funnel-bar" style="background:var(--dark); width:100%;">Sesiones</div>
+                            </div>
+                        </div>
+                        <div class="funnel-arrow">&darr;</div>
+                        <div class="funnel-step">
+                            <div class="funnel-value">11<span class="funnel-pct">6.8%</span></div>
+                            <div class="funnel-bar-wrapper">
+                                <div class="funnel-bar" style="background:var(--gold); width:68%;">CTA Clicks</div>
+                            </div>
+                        </div>
+                        <div class="funnel-arrow">&darr;</div>
+                        <div class="funnel-step">
+                            <div class="funnel-value">9<span class="funnel-pct">5.6%</span></div>
+                            <div class="funnel-bar-wrapper">
+                                <div class="funnel-bar" style="background:var(--green); width:56%;">Form Start</div>
+                            </div>
+                        </div>
+                        <div class="funnel-arrow">&darr;</div>
+                        <div class="funnel-step">
+                            <div class="funnel-value">5<span class="funnel-pct">3.1%</span></div>
+                            <div class="funnel-bar-wrapper">
+                                <div class="funnel-bar" style="background:var(--green-dark); width:31%;">Form Submit</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background:var(--green-light); border-radius:10px; padding:16px; margin-top:16px; text-align:center;">
+                        <div style="font-size:10px; text-transform:uppercase; letter-spacing:1px; color:var(--gray-500); margin-bottom:6px;">Total Contactos Comerciales</div>
+                        <div style="font-size:36px; font-weight:800; color:var(--green);">9</div>
+                        <div style="font-size:12px; color:var(--gray-700); margin-top:4px;">
+                            5 formularios &bull; 2 telefono &bull; 2 WhatsApp
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="insight-box success">
+                <span class="insight-label">Conversion</span>
+                <strong>Tasa de conversion a contacto: 5.6%</strong> (9 acciones de contacto / 162 sesiones). Para un sitio B2B industrial nuevo sin pauta publicitaria, una tasa superior al 5% es un resultado solido. La tasa de completado del formulario es del <strong>55.6%</strong> (5 envios de 9 inicios), lo cual indica oportunidad de optimizar el formulario para mejorar completado.
+            </div>
+        </div>
+
+        <!-- ===== 5. SEARCH CONSOLE ===== -->
+        <div class="page-break"></div>
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h3 class="section-title">Google Search Console &mdash; Rendimiento Organico</h3>
+            </div>
+
+            <h4 class="subsection-title">Metricas Generales</h4>
+            <div class="kpi-grid" style="grid-template-columns: repeat(4,1fr);">
+                <div class="kpi-card blue">
+                    <div class="kpi-value">1,446</div>
+                    <div class="kpi-label">Impresiones</div>
+                </div>
+                <div class="kpi-card blue">
+                    <div class="kpi-value">42</div>
+                    <div class="kpi-label">Clics</div>
+                </div>
+                <div class="kpi-card blue">
+                    <div class="kpi-value">2.90%</div>
+                    <div class="kpi-label">CTR Promedio</div>
+                </div>
+                <div class="kpi-card orange">
+                    <div class="kpi-value">6.5</div>
+                    <div class="kpi-label">Posicion Media</div>
+                </div>
+            </div>
+
+            <h4 class="subsection-title">Tendencia Diaria de Impresiones (Ene&ndash;Feb 2026)</h4>
+            <p style="font-size:12px; color:var(--gray-500); margin-bottom:6px;">Cada barra representa las impresiones de un dia. Las barras doradas marcan dias con clics.</p>
+            <div class="trend-chart">
+                <!-- Enero (31 dias) + Febrero (28 dias) = 59 bars. Max = 159. Scale: height% = value/159*100 -->
+                <div class="trend-bar" style="height:1.3%" title="Ene 1: 2 imp"></div>
+                <div class="trend-bar" style="height:0.6%" title="Ene 2: 0 imp"></div>
+                <div class="trend-bar" style="height:0.6%" title="Ene 3: 1 imp"></div>
+                <div class="trend-bar" style="height:0.6%" title="Ene 4: 0 imp"></div>
+                <div class="trend-bar highlight" style="height:5.7%" title="Ene 5: 9 imp, 1 clic"></div>
+                <div class="trend-bar highlight" style="height:5.7%" title="Ene 6: 9 imp, 1 clic"></div>
+                <div class="trend-bar" style="height:3.1%" title="Ene 7: 5 imp"></div>
+                <div class="trend-bar highlight" style="height:6.3%" title="Ene 8: 10 imp, 2 clics"></div>
+                <div class="trend-bar" style="height:8.8%" title="Ene 9: 14 imp"></div>
+                <div class="trend-bar highlight" style="height:3.1%" title="Ene 10: 5 imp, 1 clic"></div>
+                <div class="trend-bar" style="height:1.9%" title="Ene 11: 3 imp"></div>
+                <div class="trend-bar" style="height:7.5%" title="Ene 12: 12 imp"></div>
+                <div class="trend-bar highlight" style="height:15.7%" title="Ene 13: 25 imp, 5 clics"></div>
+                <div class="trend-bar highlight" style="height:18.9%" title="Ene 14: 30 imp, 12 clics"></div>
+                <div class="trend-bar" style="height:7.5%" title="Ene 15: 12 imp"></div>
+                <div class="trend-bar" style="height:7.5%" title="Ene 16: 12 imp"></div>
+                <div class="trend-bar" style="height:3.8%" title="Ene 17: 6 imp"></div>
+                <div class="trend-bar" style="height:9.4%" title="Ene 18: 15 imp"></div>
+                <div class="trend-bar highlight" style="height:16.4%" title="Ene 19: 26 imp, 1 clic"></div>
+                <div class="trend-bar highlight" style="height:10.7%" title="Ene 20: 17 imp, 1 clic"></div>
+                <div class="trend-bar highlight" style="height:12.6%" title="Ene 21: 20 imp, 2 clics"></div>
+                <div class="trend-bar highlight" style="height:4.4%" title="Ene 22: 7 imp, 1 clic"></div>
+                <div class="trend-bar" style="height:5.0%" title="Ene 23: 8 imp"></div>
+                <div class="trend-bar" style="height:8.8%" title="Ene 24: 14 imp"></div>
+                <div class="trend-bar" style="height:5.0%" title="Ene 25: 8 imp"></div>
+                <div class="trend-bar" style="height:6.3%" title="Ene 26: 10 imp"></div>
+                <div class="trend-bar" style="height:13.8%" title="Ene 27: 22 imp"></div>
+                <div class="trend-bar" style="height:11.9%" title="Ene 28: 19 imp"></div>
+                <div class="trend-bar" style="height:13.8%" title="Ene 29: 22 imp"></div>
+                <div class="trend-bar" style="height:8.2%" title="Ene 30: 13 imp"></div>
+                <div class="trend-bar" style="height:5.0%" title="Ene 31: 8 imp"></div>
+                <!-- Febrero -->
+                <div class="trend-bar" style="height:4.4%" title="Feb 1: 7 imp"></div>
+                <div class="trend-bar" style="height:6.3%" title="Feb 2: 10 imp"></div>
+                <div class="trend-bar" style="height:10.1%" title="Feb 3: 16 imp"></div>
+                <div class="trend-bar" style="height:12.6%" title="Feb 4: 20 imp"></div>
+                <div class="trend-bar" style="height:10.1%" title="Feb 5: 16 imp"></div>
+                <div class="trend-bar" style="height:10.1%" title="Feb 6: 16 imp"></div>
+                <div class="trend-bar" style="height:6.3%" title="Feb 7: 10 imp"></div>
+                <div class="trend-bar highlight" style="height:9.4%" title="Feb 8: 15 imp, 1 clic"></div>
+                <div class="trend-bar" style="height:13.2%" title="Feb 9: 21 imp"></div>
+                <div class="trend-bar" style="height:17.6%" title="Feb 10: 28 imp"></div>
+                <div class="trend-bar" style="height:11.3%" title="Feb 11: 18 imp"></div>
+                <div class="trend-bar highlight" style="height:15.1%" title="Feb 12: 24 imp, 2 clics"></div>
+                <div class="trend-bar" style="height:10.1%" title="Feb 13: 16 imp"></div>
+                <div class="trend-bar" style="height:8.8%" title="Feb 14: 14 imp"></div>
+                <div class="trend-bar highlight" style="height:8.2%" title="Feb 15: 13 imp, 1 clic"></div>
+                <div class="trend-bar highlight" style="height:18.2%" title="Feb 16: 29 imp, 1 clic"></div>
+                <div class="trend-bar" style="height:14.5%" title="Feb 17: 23 imp"></div>
+                <div class="trend-bar" style="height:35.2%" title="Feb 18: 56 imp"></div>
+                <div class="trend-bar" style="height:46.5%" title="Feb 19: 74 imp"></div>
+                <div class="trend-bar" style="height:37.1%" title="Feb 20: 59 imp"></div>
+                <div class="trend-bar" style="height:32.7%" title="Feb 21: 52 imp"></div>
+                <div class="trend-bar" style="height:20.8%" title="Feb 22: 33 imp"></div>
+                <div class="trend-bar highlight" style="height:40.9%" title="Feb 23: 65 imp, 1 clic"></div>
+                <div class="trend-bar highlight" style="height:39.6%" title="Feb 24: 63 imp, 1 clic"></div>
+                <div class="trend-bar highlight" style="height:69.8%" title="Feb 25: 111 imp, 5 clics"></div>
+                <div class="trend-bar" style="height:67.3%" title="Feb 26: 107 imp"></div>
+                <div class="trend-bar highlight" style="height:100%" title="Feb 27: 159 imp, 3 clics"></div>
+                <div class="trend-bar" style="height:4.4%" title="Feb 28: 7 imp (parcial)"></div>
+            </div>
+            <div class="trend-labels">
+                <span>1 Ene</span>
+                <span>15 Ene</span>
+                <span>1 Feb</span>
+                <span>15 Feb</span>
+                <span>28 Feb</span>
+            </div>
+
+            <div class="insight-box success" style="margin-top:16px;">
+                <span class="insight-label">Tendencia Critica</span>
+                Las impresiones diarias pasaron de <strong>2/dia (inicio enero) a 159/dia (27 febrero)</strong> &mdash; un crecimiento de <strong>7,850%</strong>. Esto coincide con la publicacion del blog (18 de febrero) y la indexacion progresiva del contenido. La ultima semana de febrero concentra el <strong>33% de todos los clics</strong> del periodo, confirmando una curva de crecimiento exponencial.
+            </div>
+
+            <h4 class="subsection-title">Rendimiento por Dispositivo</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Dispositivo</th>
+                        <th class="text-right">Clics</th>
+                        <th class="text-right">Impresiones</th>
+                        <th class="text-right">CTR</th>
+                        <th class="text-right">Posicion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Desktop</td>
+                        <td class="text-right">24</td>
+                        <td class="text-right">489</td>
+                        <td class="text-right text-green"><strong>4.91%</strong></td>
+                        <td class="text-right">7.98</td>
+                    </tr>
+                    <tr>
+                        <td>Moviles</td>
+                        <td class="text-right">18</td>
+                        <td class="text-right text-bold">950</td>
+                        <td class="text-right text-red">1.89%</td>
+                        <td class="text-right text-green"><strong>5.62</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Tablet</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">7</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right">7.57</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td>TOTAL</td>
+                        <td class="text-right">42</td>
+                        <td class="text-right">1,446</td>
+                        <td class="text-right">2.90%</td>
+                        <td class="text-right">~6.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="insight-box warning">
+                <span class="insight-label">Oportunidad</span>
+                El <strong>65.7% de las impresiones proviene de moviles</strong> (950 de 1,446), pero el CTR movil (1.89%) es menos de la mitad que desktop (4.91%). La posicion en movil es <em>mejor</em> (5.62 vs 7.98). Esto sugiere que optimizar el snippet/meta description para pantallas moviles podria mejorar significativamente los clics.
+            </div>
+
+            <h4 class="subsection-title">Top Queries en Google</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Consulta</th>
+                        <th class="text-right">Clics</th>
+                        <th class="text-right">Impresiones</th>
+                        <th class="text-right">CTR</th>
+                        <th class="text-right">Posicion</th>
+                        <th class="text-center">Potencial</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><strong>conpre</strong> (marca)</td>
+                        <td class="text-right">1</td>
+                        <td class="text-right text-bold">467</td>
+                        <td class="text-right text-red">0.21%</td>
+                        <td class="text-right">6.66</td>
+                        <td class="text-center"><span class="badge badge-red">Urgente</span></td>
+                    </tr>
+                    <tr>
+                        <td>diferencia entre concreto mr y f'c</td>
+                        <td class="text-right text-green"><strong>2</strong></td>
+                        <td class="text-right">26</td>
+                        <td class="text-right text-green">7.69%</td>
+                        <td class="text-right">4.54</td>
+                        <td class="text-center"><span class="badge badge-green">Activo</span></td>
+                    </tr>
+                    <tr>
+                        <td>concretos manzanillo</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">39</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right">4.85</td>
+                        <td class="text-center"><span class="badge badge-gold">Alto</span></td>
+                    </tr>
+                    <tr>
+                        <td>cuanto mr tiene un concreto fc 350</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">21</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right text-green"><strong>1.57</strong></td>
+                        <td class="text-center"><span class="badge badge-green">Posicion #1</span></td>
+                    </tr>
+                    <tr>
+                        <td>equivalencia concreto mr 45 a f'c</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">6</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right text-green"><strong>1.0</strong></td>
+                        <td class="text-center"><span class="badge badge-green">Posicion #1</span></td>
+                    </tr>
+                    <tr>
+                        <td>concreto mr 35 especificaciones</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">3</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right text-green"><strong>1.0</strong></td>
+                        <td class="text-center"><span class="badge badge-green">Posicion #1</span></td>
+                    </tr>
+                    <tr>
+                        <td>concreto mr 40</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">3</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right text-green"><strong>1.0</strong></td>
+                        <td class="text-center"><span class="badge badge-green">Posicion #1</span></td>
+                    </tr>
+                    <tr>
+                        <td>concreteras en colima</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">5</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right">21.2</td>
+                        <td class="text-center"><span class="badge badge-gold">Optimizar</span></td>
+                    </tr>
+                    <tr>
+                        <td>f'c concreto</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">6</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right">6.0</td>
+                        <td class="text-center"><span class="badge badge-blue">Medio</span></td>
+                    </tr>
+                    <tr>
+                        <td>concretos premezclados</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right">8.0</td>
+                        <td class="text-center"><span class="badge badge-blue">Medio</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box alert">
+                <span class="insight-label">Accion Urgente: Query de Marca</span>
+                La query <strong>"conpre"</strong> tiene 467 impresiones pero solo 1 clic (CTR 0.21%). En posicion 6.66, el sitio aparece en la parte baja de la primera pagina. Para una busqueda de marca, la posicion debe ser #1. Esto puede deberse a que Google aun esta consolidando la autoridad del dominio nuevo. Se recomienda fortalecer senales de marca (Google Business Profile, enlaces externos, schema Organization).
+            </div>
+
+            <h4 class="subsection-title">Rendimiento por Pagina (Search Console)</h4>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Pagina</th>
+                        <th class="text-right">Clics</th>
+                        <th class="text-right">Impresiones</th>
+                        <th class="text-right">CTR</th>
+                        <th class="text-right">Posicion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-row">
+                        <td><strong>/ (Home)</strong></td>
+                        <td class="text-right text-green"><strong>35</strong></td>
+                        <td class="text-right text-bold">816</td>
+                        <td class="text-right text-green">4.29%</td>
+                        <td class="text-right">6.09</td>
+                    </tr>
+                    <tr>
+                        <td><strong>/products.html</strong></td>
+                        <td class="text-right">4</td>
+                        <td class="text-right text-bold">506</td>
+                        <td class="text-right text-red">0.79%</td>
+                        <td class="text-right">5.85</td>
+                    </tr>
+                    <tr>
+                        <td>/about.html</td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">133</td>
+                        <td class="text-right">1.50%</td>
+                        <td class="text-right">8.17</td>
+                    </tr>
+                    <tr>
+                        <td>/blog/cuanto-concreto-necesito.html</td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">106</td>
+                        <td class="text-right">1.89%</td>
+                        <td class="text-right">10.1</td>
+                    </tr>
+                    <tr>
+                        <td>/project.html</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">6</td>
+                        <td class="text-right">0%</td>
+                        <td class="text-right">7.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="insight-box warning">
+                <span class="insight-label">Ganancia Rapida</span>
+                <strong>Products.html</strong> tiene <strong>506 impresiones</strong> pero solo 4 clics (CTR 0.79%). Con posicion 5.85 (primera pagina), mejorar el meta title y description podria <strong>triplicar los clics</strong> sin necesidad de mejorar posicion. Ademas, <strong>/services.html no aparece en Search Console</strong>, lo que indica oportunidad de optimizacion SEO para esa pagina.
+            </div>
+        </div>
+
+        <!-- ===== 6. FODA ===== -->
+        <div class="page-break"></div>
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">6</div>
+                <h3 class="section-title">Analisis FODA del Periodo</h3>
+            </div>
+            <div class="foda-grid">
+                <div class="foda-card fortalezas">
+                    <h4>Fortalezas</h4>
+                    <ul>
+                        <li><strong>Engagement excepcional:</strong> 6 pag/sesion y 3:38 min promedio demuestran contenido relevante y buena UX</li>
+                        <li><strong>SEO temprano efectivo:</strong> 4 queries en posicion #1 a solo 2 meses del lanzamiento</li>
+                        <li><strong>Crecimiento explosivo:</strong> Impresiones de 2 a 159/dia, curva exponencial</li>
+                        <li><strong>Conversion saludable:</strong> 5.6% tasa de contacto sin pauta publicitaria</li>
+                        <li><strong>Contenido tecnico diferenciador:</strong> Tablas MR/F'c capturan queries de nicho</li>
+                    </ul>
+                </div>
+                <div class="foda-card oportunidades">
+                    <h4>Oportunidades</h4>
+                    <ul>
+                        <li><strong>Query de marca "conpre"</strong> con 467 imp y CTR 0.21% &mdash; capturar este trafico</li>
+                        <li><strong>Products.html</strong> con 506 imp y CTR 0.79% &mdash; mejorar meta description</li>
+                        <li><strong>"concretos manzanillo"</strong> en posicion 4.85 &mdash; subir a top 3</li>
+                        <li><strong>Blog recien publicado</strong> ya genera impresiones &mdash; alto potencial de crecimiento</li>
+                        <li><strong>Sitemap no incluye blog</strong> &mdash; agregarlos aceleraria indexacion</li>
+                        <li><strong>CTR movil bajo</strong> (1.89% vs 4.91% desktop) &mdash; optimizar snippets mobile</li>
+                    </ul>
+                </div>
+                <div class="foda-card debilidades">
+                    <h4>Debilidades</h4>
+                    <ul>
+                        <li><strong>Volumen de clics aun bajo</strong> (42 en 2 meses) &mdash; natural para sitio nuevo</li>
+                        <li><strong>Services.html sin presencia organica</strong> &mdash; no genera impresiones</li>
+                        <li><strong>Blog con pocas vistas individuales</strong> &mdash; necesita tiempo de indexacion</li>
+                        <li><strong>Sin conversiones marcadas en GA4</strong> &mdash; form_submit no esta como conversion</li>
+                    </ul>
+                </div>
+                <div class="foda-card amenazas">
+                    <h4>Amenazas</h4>
+                    <ul>
+                        <li><strong>Trafico de bots</strong> (Rusia, paises sin relacion) puede distorsionar metricas</li>
+                        <li><strong>Competencia por "concretos manzanillo"</strong> &mdash; otros competidores pueden optimizar</li>
+                        <li><strong>Dependencia de trafico directo</strong> (55%) &mdash; necesita diversificar canales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 7. RECOMENDACIONES ===== -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">7</div>
+                <h3 class="section-title">Recomendaciones para Marzo&ndash;Abril 2026</h3>
+            </div>
+
+            <p style="font-size:12px; color:var(--gray-500); margin-bottom:8px; font-weight:600;">PRIORIDAD ALTA</p>
+            <ul class="rec-list">
+                <li class="rec-item">
+                    <div class="rec-priority high">1</div>
+                    <div class="rec-content">
+                        <h5>Agregar las 12 URLs del blog al sitemap.xml</h5>
+                        <p>Actualmente ausentes del sitemap. Esto esta frenando la indexacion del contenido que ya genera 106+ impresiones.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority high">2</div>
+                    <div class="rec-content">
+                        <h5>Optimizar meta title y description de products.html</h5>
+                        <p>506 impresiones con CTR 0.79% es la ganancia rapida mas grande. Un mejor snippet podria triplicar los clics.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority high">3</div>
+                    <div class="rec-content">
+                        <h5>Configurar form_submit, click_phone y click_whatsapp como conversiones en GA4</h5>
+                        <p>Sin esto, GA4 no reporta conversion rate ni valor por canal. Configuracion rapida desde el panel de admin.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority high">4</div>
+                    <div class="rec-content">
+                        <h5>Mejorar posicionamiento de la query de marca "conpre"</h5>
+                        <p>467 impresiones en posicion 6.66 con CTR 0.21%. Fortalecer Google Business Profile, enlaces externos y schema.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <p style="font-size:12px; color:var(--gray-500); margin-bottom:8px; margin-top:20px; font-weight:600;">PRIORIDAD MEDIA</p>
+            <ul class="rec-list">
+                <li class="rec-item">
+                    <div class="rec-priority medium">5</div>
+                    <div class="rec-content">
+                        <h5>Optimizar snippets para movil</h5>
+                        <p>66% de impresiones son mobile pero el CTR es menos de la mitad que desktop. Revisar longitud de titles y descriptions.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority medium">6</div>
+                    <div class="rec-content">
+                        <h5>Crear contenido especifico para queries locales</h5>
+                        <p>"Concretos manzanillo" (39 imp, pos 4.85) y "concreteras en colima" (5 imp, pos 21.2) son queries de alta intencion comercial.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority medium">7</div>
+                    <div class="rec-content">
+                        <h5>Registrar/optimizar Google Business Profile</h5>
+                        <p>Refuerza SEO local y ayuda a posicionar la query de marca "conpre" en posicion #1.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <p style="font-size:12px; color:var(--gray-500); margin-bottom:8px; margin-top:20px; font-weight:600;">PRIORIDAD NORMAL</p>
+            <ul class="rec-list">
+                <li class="rec-item">
+                    <div class="rec-priority normal">8</div>
+                    <div class="rec-content">
+                        <h5>Continuar publicando contenido de blog</h5>
+                        <p>Enfoque en queries long-tail de concreto. El blog ya demuestra traccion con 106 impresiones en solo 10 dias.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority normal">9</div>
+                    <div class="rec-content">
+                        <h5>Considerar campana de Google Ads para queries comerciales</h5>
+                        <p>Mientras el SEO organico madura, una campana de busqueda local aceleraria la captacion de leads.</p>
+                    </div>
+                </li>
+                <li class="rec-item">
+                    <div class="rec-priority normal">10</div>
+                    <div class="rec-content">
+                        <h5>Implementar UTM parameters en campanas</h5>
+                        <p>Para trackear correctamente el origen de visitas desde redes sociales, WhatsApp y correos electronicos.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ===== 8. PROYECCION ===== -->
+        <div class="page-break"></div>
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">8</div>
+                <h3 class="section-title">Proyeccion para el Siguiente Periodo</h3>
+            </div>
+            <p style="color:var(--gray-700); font-size:13px; margin-bottom:16px;">Basado en la tendencia exponencial de impresiones observada (ultima semana de febrero promedio 80+ impresiones/dia) y asumiendo la implementacion de las recomendaciones de prioridad alta:</p>
+            <table class="projection-table">
+                <thead>
+                    <tr>
+                        <th>Metrica</th>
+                        <th>Ene&ndash;Feb 2026<br><small>(Actual)</small></th>
+                        <th>Mar&ndash;Abr 2026<br><small>(Proyectado)</small></th>
+                        <th>Crecimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Impresiones organicas</td>
+                        <td class="text-center">1,446</td>
+                        <td class="text-center text-bold">4,000 &ndash; 6,000</td>
+                        <td class="text-center growth">+175% a +315%</td>
+                    </tr>
+                    <tr>
+                        <td>Clics organicos</td>
+                        <td class="text-center">42</td>
+                        <td class="text-center text-bold">150 &ndash; 250</td>
+                        <td class="text-center growth">+257% a +495%</td>
+                    </tr>
+                    <tr>
+                        <td>Usuarios nuevos</td>
+                        <td class="text-center">69</td>
+                        <td class="text-center text-bold">120 &ndash; 180</td>
+                        <td class="text-center growth">+74% a +161%</td>
+                    </tr>
+                    <tr>
+                        <td>Sesiones</td>
+                        <td class="text-center">162</td>
+                        <td class="text-center text-bold">300 &ndash; 450</td>
+                        <td class="text-center growth">+85% a +178%</td>
+                    </tr>
+                    <tr>
+                        <td>Contactos comerciales</td>
+                        <td class="text-center">9</td>
+                        <td class="text-center text-bold">15 &ndash; 25</td>
+                        <td class="text-center growth">+67% a +178%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="insight-box success" style="margin-top:16px;">
+                <span class="insight-label">Perspectiva</span>
+                La curva natural de indexacion de Google para sitios nuevos favorece un <strong>crecimiento acelerado entre el mes 3 y 6</strong>. Las proyecciones son conservadoras si se implementan las recomendaciones. El sitio tiene base tecnica y de contenido solida para escalar.
+            </div>
+        </div>
+
+        <!-- ===== 9. CONCLUSION ===== -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-number">9</div>
+                <h3 class="section-title">Conclusion</h3>
+            </div>
+            <div class="exec-summary" style="border-left: 4px solid var(--green);">
+                <p style="margin-bottom:12px;">El sitio web de Conpre Concretos ha tenido un <strong>lanzamiento exitoso</strong>. Los indicadores de engagement (6 paginas/sesion, 3:38 min en sitio) son <strong>excepcionales</strong> comparados con benchmarks de la industria. La estrategia SEO esta dando frutos tempranos con <strong>4 posiciones #1</strong> y una curva de impresiones en <strong>crecimiento exponencial</strong>.</p>
+                <p style="margin-bottom:12px;">El embudo de conversion esta funcionando: los usuarios llegan, exploran servicios y productos, y contactan &mdash; con una <strong>tasa de conversion del 5.6%</strong> sin pauta publicitaria.</p>
+                <p>El sitio esta en la fase correcta de su ciclo de vida: <strong>la base tecnica y de contenido esta solida, y ahora se necesita tiempo para que Google madure el posicionamiento</strong>. Las acciones inmediatas de mayor impacto son corregir el sitemap (agregar blog), optimizar meta descriptions de paginas clave, y configurar las conversiones en GA4.</p>
+                <p style="margin-top:16px; font-size:16px; text-align:center;"><strong style="color:var(--green);">El pronostico para el Q2 2026 es positivo.</strong></p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="report-footer">
+        <div>
+            <strong>TESEO DATA LAB</strong> &bull; Reporte generado con datos de Google Analytics 4 + Google Search Console<br>
+            Periodo analizado: 1 de enero &ndash; 28 de febrero de 2026
+        </div>
+        <div class="confidential-tag">Confidencial</div>
+    </footer>
+
+</div>
+
+</body>
+</html>

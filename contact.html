@@ -847,21 +847,25 @@
       submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
       submitBtn.disabled = true;
 
-      // Track form submission in GA4
-      gtag('event', 'form_submit', {
-        'event_category': 'lead',
-        'event_label': 'Contact Form Submission',
-        'service_type': formData.get('service_type') || 'not_specified',
-        'project_type': formData.get('project_type') || 'not_specified',
-        'value': 1
-      });
-
       fetch(this.action, {
         method: 'POST',
         body: formData
       })
         .then(response => response.text())
         .then(data => {
+          // Track form_submit SOLO cuando el envio es exitoso
+          gtag('event', 'form_submit', {
+            'event_category': 'lead',
+            'event_label': 'Contact Form Submission',
+            'service_type': formData.get('service_type') || 'not_specified',
+            'project_type': formData.get('project_type') || 'not_specified',
+            'value': 1
+          });
+          // Evento de generacion de lead para GA4 (evento recomendado)
+          gtag('event', 'generate_lead', {
+            'currency': 'MXN',
+            'value': 1
+          });
           showPopup(data);
           document.getElementById("contactForm").reset(); // Limpiar formulario
         })
