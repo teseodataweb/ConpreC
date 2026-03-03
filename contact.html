@@ -107,6 +107,9 @@
   }
   </script>
 
+  <!-- Google reCAPTCHA v3 -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6Leovn0sAAAAAGLUm8dWzQzijc11iSD-eJQrIhsL"></script>
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -168,6 +171,11 @@
 
     #popupMessage button:hover {
       background: #008a43;
+    }
+
+    /* Ocultar badge flotante de reCAPTCHA (se muestra aviso de texto en su lugar, según políticas de Google) */
+    .grecaptcha-badge {
+      visibility: hidden !important;
     }
   </style>
   <script type="application/ld+json">
@@ -560,6 +568,9 @@
               </div>
             </div>
 
+            <!-- reCAPTCHA v3 token (hidden) -->
+            <input type="hidden" name="recaptcha_token" id="recaptchaToken">
+
             <button type="submit" class="submit-btn">
               <span class="vs-btn__bar"></span>
               Enviar Solicitud
@@ -568,6 +579,11 @@
 
           <p class="form-note">⚠️ Este formulario NO genera cotizaciones automáticas. Nuestro equipo se pondrá en
             contacto contigo dentro de 24 horas hábiles para brindarte una cotización personalizada.</p>
+          <p class="recaptcha-notice" style="font-size: 12px; color: #888; margin-top: 10px;">
+            Este sitio está protegido por reCAPTCHA y aplican la
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a> y los
+            <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Términos de Servicio</a> de Google.
+          </p>
         </div>
       </div>
 
@@ -768,6 +784,7 @@
   </footer>
 
   <!-- Scroll to Top -->
+  <a href="https://wa.me/523141450639?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20concreto%20premezclado." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
   <a href="#" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
 
   <!-- JavaScript Files -->
@@ -839,45 +856,62 @@
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault(); // Evitar recarga de página
 
-      const formData = new FormData(this);
-      const submitBtn = this.querySelector('button[type="submit"]');
+      const form = this;
+      const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
       // Estado "Enviando..."
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Verificando...';
       submitBtn.disabled = true;
 
-      fetch(this.action, {
-        method: 'POST',
-        body: formData
-      })
-        .then(response => response.text())
-        .then(data => {
-          // Track form_submit SOLO cuando el envio es exitoso
-          gtag('event', 'form_submit', {
-            'event_category': 'lead',
-            'event_label': 'Contact Form Submission',
-            'service_type': formData.get('service_type') || 'not_specified',
-            'project_type': formData.get('project_type') || 'not_specified',
-            'value': 1
-          });
-          // Evento de generacion de lead para GA4 (evento recomendado)
-          gtag('event', 'generate_lead', {
-            'currency': 'MXN',
-            'value': 1
-          });
-          showPopup(data);
-          document.getElementById("contactForm").reset(); // Limpiar formulario
-        })
-        .catch(error => {
-          showPopup("Hubo un error al enviar la solicitud.");
-          console.error(error);
-        })
-        .finally(() => {
-          // Restaurar botón
+      // Obtener token de reCAPTCHA v3 antes de enviar
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6Leovn0sAAAAAGLUm8dWzQzijc11iSD-eJQrIhsL', {action: 'contact_form'}).then(function(token) {
+          // Asignar token al campo oculto
+          document.getElementById('recaptchaToken').value = token;
+
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+
+          const formData = new FormData(form);
+
+          fetch(form.action, {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => response.text())
+            .then(data => {
+              // Track form_submit SOLO cuando el envio es exitoso
+              gtag('event', 'form_submit', {
+                'event_category': 'lead',
+                'event_label': 'Contact Form Submission',
+                'service_type': formData.get('service_type') || 'not_specified',
+                'project_type': formData.get('project_type') || 'not_specified',
+                'value': 1
+              });
+              // Evento de generacion de lead para GA4 (evento recomendado)
+              gtag('event', 'generate_lead', {
+                'currency': 'MXN',
+                'value': 1
+              });
+              showPopup(data);
+              document.getElementById("contactForm").reset(); // Limpiar formulario
+            })
+            .catch(error => {
+              showPopup("Hubo un error al enviar la solicitud.");
+              console.error(error);
+            })
+            .finally(() => {
+              // Restaurar botón
+              submitBtn.innerHTML = originalText;
+              submitBtn.disabled = false;
+            });
+        }).catch(function(error) {
+          showPopup("Error de verificación de seguridad. Recarga la página e intenta de nuevo.");
           submitBtn.innerHTML = originalText;
           submitBtn.disabled = false;
+          console.error('reCAPTCHA error:', error);
         });
+      });
     });
 
     function showPopup(message) {
