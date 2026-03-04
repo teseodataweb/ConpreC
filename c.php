@@ -10,6 +10,45 @@ use PHPMailer\PHPMailer\Exception;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // =====================================================
+    // CONFIGURACIÓN reCAPTCHA v3
+    // =====================================================
+    $recaptcha_secret = "6Leovn0sAAAAAOAIg6egwR21bAiPSI0VH3lqLMZB";
+    $recaptcha_score_threshold = 0.5; // Score mínimo (0.0 = bot, 1.0 = humano)
+
+    // Verificar reCAPTCHA
+    $recaptcha_token = isset($_POST['recaptcha_token']) ? $_POST['recaptcha_token'] : '';
+
+    if (empty($recaptcha_token)) {
+        echo "Error de verificación de seguridad. Por favor recarga la página e intenta de nuevo.";
+        exit;
+    }
+
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = [
+        'secret' => $recaptcha_secret,
+        'response' => $recaptcha_token,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+
+    $options = [
+        'http' => [
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        ]
+    ];
+
+    $context = stream_context_create($options);
+    $recaptcha_response = file_get_contents($recaptcha_url, false, $context);
+    $recaptcha_result = json_decode($recaptcha_response, true);
+
+    if (!$recaptcha_result['success'] || $recaptcha_result['score'] < $recaptcha_score_threshold) {
+        echo "Verificación de seguridad fallida. Si eres un usuario legítimo, recarga la página e intenta de nuevo.";
+        exit;
+    }
+    // =====================================================
+
+    // =====================================================
     // CONFIGURACIÓN SMTP - EDITAR ESTOS VALORES
     // =====================================================
     $smtp_host = "mail.conpreconcretos.com";  // o el servidor SMTP de tu hosting
