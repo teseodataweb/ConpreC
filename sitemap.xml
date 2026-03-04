@@ -51,7 +51,7 @@
   <!-- Blog Index -->
   <url>
     <loc>https://conpreconcretos.com/blog.html</loc>
-    <lastmod>2026-02-18</lastmod>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -137,6 +137,34 @@
   <url>
     <loc>https://conpreconcretos.com/blog/preparar-terreno-concreto.html</loc>
     <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://conpreconcretos.com/blog/concretos-manzanillo.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://conpreconcretos.com/blog/diferencia-concreto-mr-fc.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://conpreconcretos.com/blog/costo-concreto-premezclado-2026.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://conpreconcretos.com/blog/concreto-mr-pavimentos.html</loc>
+    <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

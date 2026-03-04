@@ -3,6 +3,10 @@
    ============================================= */
 
 /* --- Blog Card Grid --- */
+.blog-article .row > [class*="col-"] {
+  margin-bottom: 30px;
+}
+
 .blog-card {
   background: #fff;
   border-radius: 12px;
